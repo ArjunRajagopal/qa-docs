@@ -1,0 +1,39 @@
+Verify 3756 : ET zone Dec 1 2011.
+
+User dec1@aol.com/123456
+
+ORG : (MG)
+1. Without End date and MG amount not reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Seattle-Aquarium-Society/
+2. Without End date and MG amount reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Org-Created-On-Dec1-2011 [MG date count disappeared, once it reaches the mg amount]
+
+ORG : (CG)
+1. Without End date and CG donation count not reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Org1-Created-On-Dec1-2011
+2. Without End date and CG donation count reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Harvard-College/ [CG date count disappeared, once it reaches the cg donation count]
+
+FR : (MG)
+1. Without End date and MG amount not reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Fr1-For-Org-Created-On-Dec1-2011
+2. Without End date and MG amount reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Fr-For-Without-End-Date-And-Mg-Amount-Reached-And-End-Date-Dec-1-2011-1 [MG date count disappeared, once it reaches the mg amount]
+3. With End date (Dec 31) and MG amount not reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Fr-2-Created-For-Org-Created-On-Dec1-2011-With-End-Date-And-Mg-Amount-Not-Reached-And-End-Date-Dec-1-2011/
+4. With End date (Dec 31) and MG amount reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Fr-For-With-End-Date-Dec-31-And-Mg-Amount-Reached-And-End-Date-Dec-1-2011 [MG date count disappeared and FR date count is shown, once it reaches the mg amount]
+
+FR : (CG)
+1. Without End date and CG donation count not reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Fr-Without-End-Date-And-Cg-Donation-Count-Not-Reached-And-End-Date-Dec-1-2011/
+2. Without End date and CG donation count reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Fr-Without-End-Date-And-Cg-Donation-Count-Reached-And-End-Date-Dec-1-2011 [CG date count disappeared, once it reaches the CG donation count]
+3. With End date (Dec 31) and CG donation count not reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Fr-With-End-Date-Dec-31-And-Cg-Donation-Count-Not-Reached-And-End-Date
+4. With End date (Dec 31) and CG donation count reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Fr-With-End-Date-Dec-31-And-Cg-Donation-Count-Reached-And-End-Date-Dec-1-2011 [CG date count disappeared and FR date count is shown, once it reaches the CG donation count]
+
+
+PRO : (MG)
+1. Without End date and MG amount not reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Project-Without-End-Date-And-Mg-Amount-Not-Reached-And-End-Date-Dec-1-2011
+2. Without End date and MG amount reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Project-Without-End-Date-And-Mg-Amount-Reached-And-End-Date-Dec-1-2011 [MG date count disappeared, once it reaches the mg amount]
+3. With End date (Dec 31) and MG amount not reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Project-With-End-Date-Dec-31-And-Mg-Amount-Not-Reached-And-End-Date-Dec-1-2011
+4. With End date (Dec 31) and MG amount reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Project-With-End-Date-Dec-31-And-Mg-Amount-Reached-And-End-Date-Dec-1-2011 [MG date count disappeared and PRO date count is shown, once it reaches the mg amount]
+
+PRO : (CG)
+1. Without End date and CG donation count not reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Project-Without-End-Date-And-Cg-Donation-Count-Not-Reached-And-End-Date-Dec-1-2011
+2. Without End date and CG donation count reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Project-Without-End-Date-And-Cg-Donation-Count-Reached-And-End-Date-Dec-1-2011 [CG date count disappeared, once it reaches the CG donation count]
+3. With End date (Dec 31) and CG donation count not reached & end date - Dec 1 2011 -  http://www-qatrunk.razoo.com/story/Project-With-End-Date-Dec-31-And-Cg-Donation-Count-Not-Reached-And-End-Date-Dec-1-2011
+4. With End date (Dec 31) and CG donation count reached & end date - Dec 1 2011 - http://www-qatrunk.razoo.com/story/Project-With-End-Date-Dec-31-And-Cg-Donation-Count-Reached-And-End-Date-Dec-1-2011 [CG date count disappeared and PRO date count is shown, once it reaches the CG donation count]
+
+
+
