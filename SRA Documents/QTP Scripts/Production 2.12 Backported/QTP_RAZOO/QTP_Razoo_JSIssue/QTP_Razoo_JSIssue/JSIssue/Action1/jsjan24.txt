@@ -1,0 +1,388 @@
+
+
+RepositoriesCollection.Add ("D:\QTP_RAZOO\objRepJsIssue1.tsr")
+
+'Creating Browser
+'********************
+		'Set WebBrowserDesc=Description.Create
+		'WebBrowserDesc("name").value="An inspiring place to donate and raise money - Razoo"
+		'WebBrowserDesc("name").value="Raise Money for Nonprofits and Charities Online - Razoo"		
+
+'Creating Page
+'******************
+		'Set WebPageDesc=Description.Create
+		'WebPageDesc("title").value="An inspiring place to donate and raise money - Razoo"
+     	'WebPageDesc("name").value="Raise Money for Nonprofits and Charities Online - Razoo"		
+
+'QARC Click Learn More_Donate Any where Screen
+'===========================================
+'							Browser("name:=Donate Anywhere - Razoo").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'							
+'							call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'							
+'							Public Function fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'							
+'								If Browser("name:=Donate Anywhere - Razoo").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Exist(2) Then
+'										If Browser("name:=Donate Anywhere - Razoo").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("title:=Windows Internet Explorer").WebButton("html tag:=BUTTON", "html id:=btnDetails").Exist Then
+'												Browser("name:=Donate Anywhere - Razoo").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("title:=Windows Internet Explorer").WebButton("html tag:=BUTTON", "html id:=btnDetails").Click
+'										End If
+'										strActual=Browser("name:=Donate Anywhere - Razoo").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("title:=Windows Internet Explorer").WebElement("innertext:=Line.*","html tag:=DIV").GetROProperty("innertext")
+'										msgbox strActual
+'										Datatable.Value("Line_Number_of_JS_issue","Global")=strActual
+'										Browser("name:=Donate Anywhere - Razoo").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("title:=Windows Internet Explorer").WebButton("html tag:=BUTTON", "html id:= btnOK").Click
+'								End If
+'							
+'							End Function
+
+'QARC Click Learn More_Donate Any where Screen Ended
+'=================================================
+
+'Detect_CloseJavaScriptError
+'=========================
+
+						    Public Function fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+							
+								If Browser("An inspiring place to").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Exist(2) Then
+'										If Browser("An inspiring place to").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("An inspiring place to").WebButton("html tag:=BUTTON", "html id:=btnDetails").Exist Then
+'												Browser("An inspiring place to").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("An inspiring place to").WebButton("html tag:=BUTTON", "html id:=btnDetails").Click
+'										End If
+										If Browser("An inspiring place to").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("An inspiring place to").WebButton("Show details").Exist Then
+												Browser("An inspiring place to").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("An inspiring place to").WebButton(" Show details").Click
+										End If
+										strActual=Browser("An inspiring place to").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("An inspiring place to").WebElement("innertext:=Line.*","html tag:=DIV").GetROProperty("innertext")
+										msgbox strActual
+										Datatable.Value("Line_Number_of_JS_issue","Global")=strActual
+										Browser("An inspiring place to").Window("regexpwndtitle:=Windows Internet Explorer","regexpwndclass:=Internet Explorer_TridentDlgFrame").Page("An inspiring place to").WebButton("html tag:=BUTTON", "html id:= btnOK").Click
+								End If
+						
+							End Function
+
+'Home Page Screen
+'=================
+'Browser("Action Controller: Exception").Navigate "http://www-qa.razoo.com/"
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").Link("Sign up").Click 
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("user[first_name]").Set "Hp"
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("user[last_name]").Set "Razoo" 
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("user[email]").Set "HpRazoo3@sra.com"
+'Browser("An inspiring place to").Page("An inspiring place to").WebCheckBox("user[terms_of_use]").Set "ON" 
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("user[password]").SetSecure "4d39500247e1c78f77baa294e7edeaa36c4a"
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("user[password_confirmation]").SetSecure "4d395005e7a35e3aba599d613c99e159ce4b" 
+'Browser("An inspiring place to").Page("An inspiring place to").WebButton("Create Account").Click
+'
+''My Account Screen
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").Link("My Profile").Click 
+''Browser("An inspiring place to").Page("An inspiring place to").Link("donate > Find and support").Click
+'My Profile Screen
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").Link("My Donations").Click 
+
+'My Donations Screen
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").Link("Account Settings").Click
+'
+''Account Settings Screen
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+''Browser("An inspiring place to").Page("An inspiring place to").Link("My Saved Cards").Click 
+
+
+'' Save Cards Screen
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").Link("donate > Find and support").Click
+'
+'
+''Search Screen
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("kw").Set "ORG FOR HP15"
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("kw").Submit
+'Browser("An inspiring place to").Page("An inspiring place to").Link("ORG FOR HP15").Click
+'
+''Story Page Screen
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("donation[amount]").Set "30"
+'Browser("An inspiring place to").Page("An inspiring place to").WebButton("Donate").Click
+
+'Donation Transaction Screen
+
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("donation[amount]").Set "30.00"
+'Browser("An inspiring place to").Page("An inspiring place to").WebRadioGroup("tip_amount").Select "3.00" 
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("order_user_order[credit_card_a_2").Set "Hp Razoo"
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("order_user_order[credit_card_a").Set "Wood RidgeDrive" 
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("order_user_order[credit_card_a_3").Set "Washington DC"
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("order_user_order[credit_card_a_4").Set "Washington "
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("order_user_order[credit_card_a_5").Set "20001"
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("order_user_order[credit_card_a_6").Set "5555555555554444"
+'Browser("An inspiring place to").Page("An inspiring place to").WebEdit("order_user_order[credit_card_a_7").Set "123" 
+'Browser("An inspiring place to").Page("An inspiring place to").WebButton("Donate Now").Click
+'
+''Thank You Screen
+''=================
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").Link("continue without commenting").Click
+'
+''Share Page1
+''============
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 38,8
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").Link("Skip this step").Click
+'
+''Recommendation page
+''====================
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").Link("Go back to ORG FOR HP15").Click
+'		
+''Story page
+''==========
+'
+'Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+'call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("An inspiring place to").Link("fundraise > Start raising").Click
+
+'=========
+'=========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Start a fundraiser").Click
+
+'Fundraiser Page Creation 
+'======================
+
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("org_picker_kw").Set "Org"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("org_picker_kw").Set "ORG FOR HP15"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("story[title]").Set "Fr page"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("story[blurb]").Set "Fr page"
+Browser("An inspiring place to").Page("An inspiring place to").WebFile("story[story_image]").Set "C:\fakepath\Chrysanthemum.jpg"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("story[goal]").Set "200"
+Browser("An inspiring place to").Page("An inspiring place to").Link("28").Click
+Browser("An inspiring place to").Page("An inspiring place to").WebButton("Create Fundraising Page").Click
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("org_picker_kw").Submit
+
+'Share Page2
+'============
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("see my fundraiser").Click
+
+'Story page
+'==========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Edit Page").Click
+
+'Edit Page
+'=========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").WebButton("Update Information").Click
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+
+'Screen
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+
+'Thank You Screen
+'=================
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("continue without commenting").Click
+	
+'Share Page1
+'============
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Skip this step").Click
+
+'Recommendation page
+'====================
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Go back to ORG FOR HP15").Click
+		
+'Story page
+'==========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+'Browser("An inspiring place to").Page("ORG FOR HP15 - Razoo").Link("fundraise > Start raising").Click
+Browser("An inspiring place to").Page("An inspiring place to").Link("fundraise > Start raising").Click
+
+'CMSPage
+'=========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Start a fundraiser").Click
+
+'fundraising Creation Page
+'=======================
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("org_picker_kw").Set "Org"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("org_picker_kw").Set "ORG FOR HP15"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("story[title]").Set "Fr page"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("story[blurb]").Set "Fr page"
+Browser("An inspiring place to").Page("An inspiring place to").WebFile("story[story_image]").Set "C:\fakepath\Chrysanthemum.jpg"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("story[goal]").Set "200"
+Browser("An inspiring place to").Page("An inspiring place to").Link("28").Click
+Browser("An inspiring place to").Page("An inspiring place to").WebButton("Create Fundraising Page").Click
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("org_picker_kw").Submit
+
+'Share Page2
+'============
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("see my fundraiser").Click
+
+'Story page
+'==========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Edit Page").Click
+
+''Edit Page
+'=========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").WebButton("Update Information").Click
+
+'ThumbNail
+'==========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("Fr page - Razoo").Link("Thumbnail").Click
+
+'Matching Grants
+'===============
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Matching Grants").Click
+
+'promote page
+'============
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Promote").Click
+
+'Donate Any where Page
+'=====================
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("DonateAnywhere").Click
+
+'Donation report Page
+'===================
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Donations").Click
+
+'Log out
+'======
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Log out").Click
+
+'Login Page
+'==========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Log in").Click
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("user_session[email]").Set "Brian@razoo.com"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("user_session[password]").Set " razoo1"
+Browser("An inspiring place to").Page("An inspiring place to").WebButton("Log in").Click
+Browser("An inspiring place to").Dialog("AutoComplete Passwords").WinButton("Yes").Click
+
+'Admin Page
+'==========
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Navigate("http://www-qa.razoo.com/admin")
+
+'Marquees page
+'==============
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Homepage Marquees").Click
+
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("New Marquee").Click
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Page("An inspiring place to").Link("Cancel").Click
+
+Browser("An inspiring place to").Navigate "http://www-qa.razoo.com/admin"
+
+'Search for a user page
+'===================
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+
+Browser("An inspiring place to").Page("An inspiring place to").Link("Search for a user").Click
+Browser("An inspiring place to").Navigate "http://www-qa.razoo.com/admin"
+
+'Create Org Admin
+'===============
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+
+Browser("An inspiring place to").Page("An inspiring place to").Link("Manage Org Admins").Click
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("email").Set "HPRazoo3@sra.com"
+Browser("An inspiring place to").Page("An inspiring place to").WebEdit("ein").Set "123456789"
+Browser("An inspiring place to").Page("An inspiring place to").WebButton("Create Admin").Click
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Navigate "http://www-qa.razoo.com/admin"
+
+'Manage orders page(refunds)
+'==========================
+
+Browser("An inspiring place to").Page("An inspiring place to").Link("Manage Orders").Click
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Navigate "http://www-qa.razoo.com/admin"
+
+'Manage Disbursements
+'====================
+
+Browser("An inspiring place to").Page("An inspiring place to").Link("Manage Disbursements").Click
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+
+'Export Disbursements page
+'========================
+
+Browser("An inspiring place to").Page("An inspiring place to").Link("Export Disbursements").Click
+Browser("An inspiring place to").WinStatusBar("msctls_statusbar32").DblClick 100,11
+call fnDetect_CloseJavaScriptError(WebBrowserDesc,WebPageDesc)
+Browser("An inspiring place to").Navigate "http://www-qa.razoo.com/admin"
+
+'Create New ORG
+'===============
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

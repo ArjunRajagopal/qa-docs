@@ -1,0 +1,61 @@
+=================================================================================================================================
+						RAZOO
+=================================================================================================================================
+					README.TXT for QTP Scheduler
+=================================================================================================================================
+
+Pre-condition:
+
+=================================================================================================================================
+1. Create a .vbs file to launch QTP
+	a. Open a text file and enter the following code
+	    Set App = CreateObject("QuickTest.Application")
+	    App.Launch
+	    App.Visible = True
+	    App.WindowState = "Maximized" ' Maximize the QuickTest window
+	    App.ActivateView "ExpertView" ' Display the Expert View
+	    App.open "K:\QTP_RAZOO\Driver", True
+	    App.test.Run
+	b. save the file as QTPScript.vbs file.
+2. Place the file in the path "C:\Users\RAZOO\Desktop"
+ 
+=================================================================================================================================
+
+Steps to set Scheduler:
+
+=================================================================================================================================
+Step 1: Navigate to the Task Scheduler
+
+	 a. Click Start->Allprograms->ControlPanel
+         b. Click on "System and Security" option.
+         c. Click on "Administrative Tools" option.
+         d. Double click on "Task Scheduler".
+
+Step2 : Create the 1st Task Scheduler for invoking the .vbs File(created in Precondition) using the following steps,
+
+        1. Select on Action -> Create Basic Task
+	2. Enter Name as 'QTP Script' and click on Next button
+	3. Choose 'Daily' option and click on Next button
+	4. Select the Schedule date and time (say, 7:30 PM) and click on Next button
+      	5. Choose 'Start a program' option 
+	6. Click on 'Browse' button and upload the created .Vbs File(QTPScript.vbs) and click on Next button
+	7. Click on Finish button -> 1st Task Scheduler gets created successfully.
+        8. Check for the created task in the Task Scheduler library.
+
+	OUTPUT : 
+	At 7:30 AM, QTP shall be launched and start Execution
+
+Note: To run the Scheduler more than once on the same day at some specific Time, do the following.
+
+	1. Click Start->Allprograms->ControlPanel
+	2. Click on "System and Security" option.
+	3. Click on "Administrative Tools" option.
+	4. Double click on "Task Scheduler".
+	5. Click on 'Task Scheduler Library'
+	6. Double Click on the created task in the Task Schedular Library. Scheduler Properties window shall be opened.
+        7. Click on Triggers tab in the Properties window.
+        8. Click on edit button in the properties window.
+        9. Change the settings(start date,time) and click on Ok.
+        10.Click on Ok in properties window ->Task Scheduler gets created successfully for executing the scripts  2nd time on the same day.
+
+=================================================================================================================================

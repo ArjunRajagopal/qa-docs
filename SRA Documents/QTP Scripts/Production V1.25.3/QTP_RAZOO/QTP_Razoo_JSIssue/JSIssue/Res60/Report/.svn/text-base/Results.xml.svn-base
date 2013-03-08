@@ -1,0 +1,547 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,ActionMaintenanceSummary*,NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="QuickTest Professional" productVer="10.00" os="Windows 7" host="RAZOO-3"><DocLocation><![CDATA[D:\QTP_RAZOO\QTP_Razoo_JSIssue\JSIssue]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[JSIssue]]></DName>
+<Res><![CDATA[Res60]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action1]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:40]]></Time>
+<TimeTick>1307531800</TimeTick>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:40]]></Time>
+<TimeTick>1307531800</TimeTick>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[fundraise > Start raising.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:40]]></Time>
+<TimeTick>1307531800</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="12" Source="Action1" SourceLine="114" >
+<Disp><![CDATA[fundraise > Start raising.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="11" Source="Action1" SourceLine="114" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/orders<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:41]]></Time>
+<TimeTick>1307531801</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="14" nType="Navigate to https://www-qaindia.razoo.com/admin/orders" Source="Action1" SourceLine="237" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:41]]></Time>
+<TimeTick>1307531801</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="16" Source="Action1" SourceLine="238" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:44]]></Time>
+<TimeTick>1307531804</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="18" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:44]]></Time>
+<TimeTick>1307531804</TimeTick>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[number.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["23"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:44]]></Time>
+<TimeTick>1307531804</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="22" Source="Action1" SourceLine="240" >
+<Disp><![CDATA[number.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Find Order.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:44]]></Time>
+<TimeTick>1307531804</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="25" Source="Action1" SourceLine="241" >
+<Disp><![CDATA[Find Order.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="21" Source="Action1" SourceLine="240" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:44]]></Time>
+<TimeTick>1307531804</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="27" Source="Action1" SourceLine="244" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:47]]></Time>
+<TimeTick>1307531807</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="29" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:47]]></Time>
+<TimeTick>1307531807</TimeTick>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Resend Receipt.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:47]]></Time>
+<TimeTick>1307531807</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="33" Source="Action1" SourceLine="246" >
+<Disp><![CDATA[Resend Receipt.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[Send Receipt.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:47]]></Time>
+<TimeTick>1307531807</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="36" Source="Action1" SourceLine="247" >
+<Disp><![CDATA[Send Receipt.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="32" Source="Action1" SourceLine="246" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:50]]></Time>
+<TimeTick>1307531810</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="38" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/disbursements/new<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:50]]></Time>
+<TimeTick>1307531810</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="40" nType="Navigate to https://www-qaindia.razoo.com/admin/disbursements/new" Source="Action1" SourceLine="256" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:50]]></Time>
+<TimeTick>1307531810</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="42" Source="Action1" SourceLine="257" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:53]]></Time>
+<TimeTick>1307531813</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="44" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/disbursement_adjustment_types<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:53]]></Time>
+<TimeTick>1307531813</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="46" nType="Navigate to https://www-qaindia.razoo.com/admin/disbursement_adjustment_types" Source="Action1" SourceLine="261" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:54]]></Time>
+<TimeTick>1307531814</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="48" Source="Action1" SourceLine="262" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:56]]></Time>
+<TimeTick>1307531816</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="50" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:57]]></Time>
+<TimeTick>1307531817</TimeTick>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[+ Add a new type.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:57]]></Time>
+<TimeTick>1307531817</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="54" Source="Action1" SourceLine="266" >
+<Disp><![CDATA[+ Add a new type.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="53" Source="Action1" SourceLine="266" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:57]]></Time>
+<TimeTick>1307531817</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="56" Source="Action1" SourceLine="267" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:46:59]]></Time>
+<TimeTick>1307531819</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="58" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:00]]></Time>
+<TimeTick>1307531820</TimeTick>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Cancel.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:00]]></Time>
+<TimeTick>1307531820</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="62" Source="Action1" SourceLine="269" >
+<Disp><![CDATA[Cancel.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="61" Source="Action1" SourceLine="269" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/disbursement_exports/new<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:00]]></Time>
+<TimeTick>1307531820</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="64" nType="Navigate to https://www-qaindia.razoo.com/admin/disbursement_exports/new" Source="Action1" SourceLine="274" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:00]]></Time>
+<TimeTick>1307531820</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="66" Source="Action1" SourceLine="275" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:03]]></Time>
+<TimeTick>1307531823</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="68" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/reports<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:03]]></Time>
+<TimeTick>1307531823</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="70" nType="Navigate to https://www-qaindia.razoo.com/admin/reports" Source="Action1" SourceLine="279" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:04]]></Time>
+<TimeTick>1307531824</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="72" Source="Action1" SourceLine="280" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:06]]></Time>
+<TimeTick>1307531826</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="74" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:06]]></Time>
+<TimeTick>1307531826</TimeTick>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[report_type.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["Audits Report"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:06]]></Time>
+<TimeTick>1307531826</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="78" Source="Action1" SourceLine="282" >
+<Disp><![CDATA[report_type.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Run Report.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:06]]></Time>
+<TimeTick>1307531826</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="81" Source="Action1" SourceLine="283" >
+<Disp><![CDATA[Run Report.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="77" Source="Action1" SourceLine="282" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:07]]></Time>
+<TimeTick>1307531827</TimeTick>
+<NodeArgs eType="Replay" icon="8" nRep="83" Source="Action1" SourceLine="284" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:09]]></Time>
+<TimeTick>1307531829</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="85" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:30]]></Time>
+<TimeTick>1307531850</TimeTick>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[<< Back to Admin Page]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the object "<< Back to Admin Page" (of class Link). Verify that this object's properties match an object currently displayed in your application.]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:30]]></Time>
+<TimeTick>1307531850</TimeTick>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[<< Back to Admin Page]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = Link<br>Html Tag = A<br>|Visible = -1<br>Text = &lt&lt Back to Admin Page<br>Name = &lt&lt Back to Admin Page<br>Html Id = <br>Href = https://www-qa.razoo.com/admin<br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:30]]></Time>
+<TimeTick>1307531850</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="130" status="Warning" nType="Description" Source="Action1" SourceLine="286" >
+<Disp><![CDATA[<< Back to Admin Page]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="7" nRep="129" status="Failed" nType="Run Error" Source="Action1" SourceLine="286" >
+<Disp><![CDATA[<< Back to Admin Page]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="128" status="Failed" Source="Action1" SourceLine="286" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="10" status="Failed" Source="Action1" SourceLine="114" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the object &quot;&lt;&lt; Back to Admin Page&quot; (of class Link). Verify that this object's properties match an object currently displayed in your application.<BR>Line (287): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;&lt;&lt; Back to Admin Page&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:30]]></Time>
+<TimeTick>1307531850</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="131" status="Failed" Source="Action1" SourceLine="286" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:56]]></Time>
+<TimeTick>1307531876</TimeTick>
+<NodeArgs eType="General" icon="14" nRep="132" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="6/8/2011 - 16:46:40" eTime="6/8/2011 - 16:47:56" passed="0" failed="2" warnings="1" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[JSIssue Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Step rID="T48">
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[6/8/2011 - 16:47:56]]></Time>
+<TimeTick>1307531876</TimeTick>
+<NodeArgs eType="General" icon="15" nRep="135" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="6/8/2011 - 16:46:39" eTime="6/8/2011 - 16:47:56" passed="0" failed="2" warnings="1" stopped="True" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test JSIssue Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

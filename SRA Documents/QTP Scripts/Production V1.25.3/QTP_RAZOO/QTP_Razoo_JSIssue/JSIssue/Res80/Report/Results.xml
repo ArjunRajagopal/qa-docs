@@ -1,0 +1,268 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,ActionMaintenanceSummary*,NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="QuickTest Professional" productVer="10.00" os="" host="RAZOO-1"><DocLocation><![CDATA[D:\QTP_RAZOO\QTP_Razoo_JSIssue\JSIssue]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[JSIssue]]></DName>
+<Res><![CDATA[Res80]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<Step rID="T3">
+<Obj plainTxt="False" ><![CDATA[JavaScriptError]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> JavaScriptError<br><b><u>Defined in</u>:</b> RecoveryFiles\JSError.qrs<br><b><u>Loading failed with error</u>:</b> The path </div></SPAN>]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:39]]></Time>
+<TimeTick>1308646959</TimeTick>
+<NodeArgs eType="Replay" icon="3" nRep="5" status="Warning" nType="Recovery" >
+<Disp><![CDATA[JavaScriptError]]></Disp>
+</NodeArgs>
+</Step>
+<DIter rID="T4" iterID="1" >
+<Action rID="T5">
+<AName><![CDATA[Action1]]></AName>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:39]]></Time>
+<TimeTick>1308646959</TimeTick>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/organizations/Org-For-Js1/audits<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:39]]></Time>
+<TimeTick>1308646959</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="11" nType="Navigate to https://www-qaindia.razoo.com/organizations/Org-For-Js1/audits" Source="Action1" SourceLine="313" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:40]]></Time>
+<TimeTick>1308646960</TimeTick>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Verify]]></Obj>
+<Details plainTxt="False" ><![CDATA[The "Verify" object's description matches more than one of the objects currently displayed in your application. Add additional properties to the object description in order to uniquely identify the object.]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:40]]></Time>
+<TimeTick>1308646960</TimeTick>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Verify]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = Link<br>Html Tag = A<br>|Visible = -1<br>Text = Verify<br>Name = Verify<br>Html Id = <br>Href = https://www-qa.razoo.com/organizations/534543534/audits/new?audit_status=1&audit_type=Audit%3A%3ARazooAudit<br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:40]]></Time>
+<TimeTick>1308646960</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="17" status="Warning" nType="Description" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[Verify]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="8" nRep="16" status="Failed" nType="Run Error" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[Verify]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="15" status="Failed" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="10" status="Failed" Source="Action1" SourceLine="313" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The &quot;Verify&quot; object's description matches more than one of the objects currently displayed in your application. Add additional properties to the object description in order to uniquely identify the object.<BR>Line (317): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;Verify&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:40]]></Time>
+<TimeTick>1308646960</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="18" status="Failed" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:55]]></Time>
+<TimeTick>1308646975</TimeTick>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:55]]></Time>
+<TimeTick>1308646975</TimeTick>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Verify]]></Obj>
+<Details plainTxt="False" ><![CDATA[The "Verify" object's description matches more than one of the objects currently displayed in your application. Add additional properties to the object description in order to uniquely identify the object.]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:55]]></Time>
+<TimeTick>1308646975</TimeTick>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Verify]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = Link<br>Html Tag = A<br>|Visible = -1<br>Text = Verify<br>Name = Verify<br>Html Id = <br>Href = https://www-qa.razoo.com/organizations/534543534/audits/new?audit_status=1&audit_type=Audit%3A%3ARazooAudit<br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:55]]></Time>
+<TimeTick>1308646975</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="25" status="Warning" nType="Description" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[Verify]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="8" nRep="24" status="Failed" nType="Run Error" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[Verify]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="23" status="Failed" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="22" status="Failed" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The &quot;Verify&quot; object's description matches more than one of the objects currently displayed in your application. Add additional properties to the object description in order to uniquely identify the object.<BR>Line (317): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;Verify&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:55]]></Time>
+<TimeTick>1308646975</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="26" status="Failed" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[6/21/2011 - 14:32:58]]></Time>
+<TimeTick>1308646978</TimeTick>
+<NodeArgs eType="General" icon="10" nRep="27" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="6/21/2011 - 14:32:39" eTime="6/21/2011 - 14:32:58" passed="0" failed="4" warnings="2" ></Summary>
+<NodeArgs eType="StartAction" icon="5" nRep="8" status="Failed" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[JSIssue Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="6/21/2011 - 14:32:39" eTime="6/21/2011 - 14:32:58" passed="0" failed="4" warnings="3" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test JSIssue Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

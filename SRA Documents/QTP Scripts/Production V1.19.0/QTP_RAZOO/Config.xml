@@ -1,0 +1,18 @@
+<Environment>
+  
+  <Variable>
+	<Name>Libpath</Name>
+ 	<Value>K:\QTP_RAZOO\UDF\UserFunctions.vbs</Value>
+  </Variable>	
+
+  <Variable>
+	<Name>TestSuitepath</Name>
+	<Value>K:\QTP_RAZOO\TestSuite.xls</Value>  
+  </Variable>
+
+<Variable>
+	<Name>ObjRep</Name>
+ 	<Value>K:\QTP_RAZOO\OR\ObjRep.tsr</Value>
+  </Variable>
+ 
+</Environment>

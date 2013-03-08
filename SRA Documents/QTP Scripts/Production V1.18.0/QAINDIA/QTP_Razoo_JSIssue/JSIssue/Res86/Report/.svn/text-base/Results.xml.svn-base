@@ -1,0 +1,3643 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,ActionMaintenanceSummary*,NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="QuickTest Professional" productVer="10.00" os="Windows 7" host="RAZOO-3"><DocLocation><![CDATA[D:\QTP_RAZOO\QTP_Razoo_JSIssue\JSIssue]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[JSIssue]]></DName>
+<Res><![CDATA[Res86]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action1]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:51]]></Time>
+<TimeTick>1308656931</TimeTick>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to http://www-qaindia.razoo.com/<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:51]]></Time>
+<TimeTick>1308656931</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="10" nType="Navigate to http://www-qaindia.razoo.com/" Source="Action1" SourceLine="33" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:51]]></Time>
+<TimeTick>1308656931</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="12" Source="Action1" SourceLine="34" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:53]]></Time>
+<TimeTick>1308656933</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="14" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:53]]></Time>
+<TimeTick>1308656933</TimeTick>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Sign up.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:53]]></Time>
+<TimeTick>1308656933</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="18" Source="Action1" SourceLine="36" >
+<Disp><![CDATA[Sign up.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[user[first_name].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Hp"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:54]]></Time>
+<TimeTick>1308656934</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="21" Source="Action1" SourceLine="37" >
+<Disp><![CDATA[user[first_name].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[user[last_name].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Razoo"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:54]]></Time>
+<TimeTick>1308656934</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="24" Source="Action1" SourceLine="38" >
+<Disp><![CDATA[user[last_name].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[user[email].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["HpRazoo3@sra.com"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:54]]></Time>
+<TimeTick>1308656934</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="27" Source="Action1" SourceLine="39" >
+<Disp><![CDATA[user[email].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[user[terms_of_use].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["ON"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:54]]></Time>
+<TimeTick>1308656934</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="30" Source="Action1" SourceLine="40" >
+<Disp><![CDATA[user[terms_of_use].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[user[password].SetSecure]]></Obj>
+<Details plainTxt="False" ><![CDATA["4d39500247e1c78f77baa294e7edeaa36c4a"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:54]]></Time>
+<TimeTick>1308656934</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="33" Source="Action1" SourceLine="41" >
+<Disp><![CDATA[user[password].SetSecure]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[user[password_confirmation].SetSecure]]></Obj>
+<Details plainTxt="False" ><![CDATA["4d395005e7a35e3aba599d613c99e159ce4b"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:54]]></Time>
+<TimeTick>1308656934</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="36" Source="Action1" SourceLine="42" >
+<Disp><![CDATA[user[password_confirmation].SetSecure]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Create Account.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:54]]></Time>
+<TimeTick>1308656934</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="39" Source="Action1" SourceLine="43" >
+<Disp><![CDATA[Create Account.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[donate > Find and support.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:55]]></Time>
+<TimeTick>1308656935</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="42" Source="Action1" SourceLine="44" >
+<Disp><![CDATA[donate > Find and support.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="17" Source="Action1" SourceLine="36" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:55]]></Time>
+<TimeTick>1308656935</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="44" Source="Action1" SourceLine="47" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:58]]></Time>
+<TimeTick>1308656938</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="46" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:58]]></Time>
+<TimeTick>1308656938</TimeTick>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA["kw"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (2 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=text<br>name=kw<br>micclass=WebEdit<br>html tag=INPUT<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (2 objects found)&nbsp;</FONT></u><br>
+type=text<br>micclass=WebEdit<br>html tag=INPUT<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=kw<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>html id=parametricKeyword<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>max length=2147483647<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>default value=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>class=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>rows=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:58]]></Time>
+<TimeTick>1308656938</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="50" Source="Action1" SourceLine="49" >
+<Disp><![CDATA["kw"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[kw.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["TEST ORG1 WITH EIN2"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:58]]></Time>
+<TimeTick>1308656938</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="51" Source="Action1" SourceLine="49" >
+<Disp><![CDATA[kw.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[kw.Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:58]]></Time>
+<TimeTick>1308656938</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="54" Source="Action1" SourceLine="50" >
+<Disp><![CDATA[kw.Submit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="49" Source="Action1" SourceLine="49" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="9" Source="Action1" SourceLine="33" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The &quot;TEST ORG1 WITH EIN2&quot; Link object was not found in the Object Repository.<BR>Check the Object Repository to confirm that the object exists or to find the correct name for the object.<BR>Line (52): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;TEST ORG1 WITH EIN2&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:18:58]]></Time>
+<TimeTick>1308656938</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="55" status="Failed" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The &quot;TEST ORG1 WITH EIN2&quot; Link object was not found in the Object Repository.<BR>Check the Object Repository to confirm that the object exists or to find the correct name for the object.<BR>Line (52): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;TEST ORG1 WITH EIN2&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:19:47]]></Time>
+<TimeTick>1308656987</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="56" status="Failed" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The &quot;TEST ORG1 WITH EIN2&quot; Link object was not found in the Object Repository.<BR>Check the Object Repository to confirm that the object exists or to find the correct name for the object.<BR>Line (52): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;TEST ORG1 WITH EIN2&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:21:55]]></Time>
+<TimeTick>1308657115</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="57" status="Failed" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The &quot;TEST ORG1 WITH EIN2&quot; Link object was not found in the Object Repository.<BR>Check the Object Repository to confirm that the object exists or to find the correct name for the object.<BR>Line (52): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;TEST ORG1 WITH EIN2&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:21:56]]></Time>
+<TimeTick>1308657116</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="58" status="Failed" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The &quot;TEST ORG1 WITH EIN2&quot; Link object was not found in the Object Repository.<BR>Check the Object Repository to confirm that the object exists or to find the correct name for the object.<BR>Line (52): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;TEST ORG1 WITH EIN2&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:21:57]]></Time>
+<TimeTick>1308657117</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="59" status="Failed" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The &quot;TEST ORG1 WITH EIN2&quot; Link object was not found in the Object Repository.<BR>Check the Object Repository to confirm that the object exists or to find the correct name for the object.<BR>Line (52): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;TEST ORG1 WITH EIN2&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:21:57]]></Time>
+<TimeTick>1308657117</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="60" status="Failed" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The &quot;TEST ORG1 WITH EIN2&quot; Link object was not found in the Object Repository.<BR>Check the Object Repository to confirm that the object exists or to find the correct name for the object.<BR>Line (52): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;TEST ORG1 WITH EIN2&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:21:58]]></Time>
+<TimeTick>1308657118</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="61" status="Failed" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:23:40]]></Time>
+<TimeTick>1308657220</TimeTick>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:23:40]]></Time>
+<TimeTick>1308657220</TimeTick>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[TEST ORG1 WITH EIN2.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:23:40]]></Time>
+<TimeTick>1308657220</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="66" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[TEST ORG1 WITH EIN2.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="65" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:23:40]]></Time>
+<TimeTick>1308657220</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="68" Source="Action1" SourceLine="55" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:23:43]]></Time>
+<TimeTick>1308657223</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="70" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:04]]></Time>
+<TimeTick>1308657244</TimeTick>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA["donation[amount]"- Description mismatch]]></Obj>
+<Details plainTxt="False" ><![CDATA[The object was not found using the test object description. Check the object's properties.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:04]]></Time>
+<TimeTick>1308657244</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="115" status="Warning" Source="Action1" SourceLine="57" >
+<Disp><![CDATA["donation[amount]"- Description mismatch]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA["donation[amount]"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=text<br>name=order_user_order[donations_attributes][0][amount]<br>micclass=WebEdit<br>html tag=INPUT<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (2 objects found)&nbsp;</FONT></u><br>
+type=text<br>micclass=WebEdit<br>html tag=INPUT<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=order_user_order[donations_attributes][0][amount]<SPAN class=Failed> (Skipped)</SPAN><br>html id=donation_amount<SPAN class=Failed> (Skipped)</SPAN><br>max length=2147483647<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>default value=30.00<SPAN class=Failed> (Skipped)</SPAN><br>class=<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>rows=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:04]]></Time>
+<TimeTick>1308657244</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="116" Source="Action1" SourceLine="57" >
+<Disp><![CDATA["donation[amount]"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[donation[amount].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["30"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:04]]></Time>
+<TimeTick>1308657244</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="117" Source="Action1" SourceLine="57" >
+<Disp><![CDATA[donation[amount].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Donate.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:04]]></Time>
+<TimeTick>1308657244</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="120" Source="Action1" SourceLine="58" >
+<Disp><![CDATA[Donate.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="114" status="Warning" Source="Action1" SourceLine="57" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:04]]></Time>
+<TimeTick>1308657244</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="122" Source="Action1" SourceLine="61" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:07]]></Time>
+<TimeTick>1308657247</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="124" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:07]]></Time>
+<TimeTick>1308657247</TimeTick>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[donation[amount].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["30.00"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:07]]></Time>
+<TimeTick>1308657247</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="128" Source="Action1" SourceLine="63" >
+<Disp><![CDATA[donation[amount].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_2.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Hp Razoo"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:07]]></Time>
+<TimeTick>1308657247</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="131" Source="Action1" SourceLine="64" >
+<Disp><![CDATA[order_user_order[credit_card_a_2.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Wood RidgeDrive"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:07]]></Time>
+<TimeTick>1308657247</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="134" Source="Action1" SourceLine="65" >
+<Disp><![CDATA[order_user_order[credit_card_a.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T48">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_3.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Washington DC"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:07]]></Time>
+<TimeTick>1308657247</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="137" Source="Action1" SourceLine="66" >
+<Disp><![CDATA[order_user_order[credit_card_a_3.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_4.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["Washington"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:07]]></Time>
+<TimeTick>1308657247</TimeTick>
+<NodeArgs eType="Replay" icon="15" nRep="140" Source="Action1" SourceLine="67" >
+<Disp><![CDATA[order_user_order[credit_card_a_4.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_5.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["20001"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:07]]></Time>
+<TimeTick>1308657247</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="143" Source="Action1" SourceLine="68" >
+<Disp><![CDATA[order_user_order[credit_card_a_5.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_6.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["5555555555554444"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:08]]></Time>
+<TimeTick>1308657248</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="146" Source="Action1" SourceLine="69" >
+<Disp><![CDATA[order_user_order[credit_card_a_6.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_7.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["123"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:08]]></Time>
+<TimeTick>1308657248</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="149" Source="Action1" SourceLine="70" >
+<Disp><![CDATA[order_user_order[credit_card_a_7.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[Donate Now.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:08]]></Time>
+<TimeTick>1308657248</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="152" Source="Action1" SourceLine="71" >
+<Disp><![CDATA[Donate Now.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="127" Source="Action1" SourceLine="63" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:08]]></Time>
+<TimeTick>1308657248</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="154" Source="Action1" SourceLine="75" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:11]]></Time>
+<TimeTick>1308657251</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="156" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:11]]></Time>
+<TimeTick>1308657251</TimeTick>
+<Step rID="T57">
+<Obj plainTxt="False" ><![CDATA[No Thanks.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:11]]></Time>
+<TimeTick>1308657251</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="160" Source="Action1" SourceLine="77" >
+<Disp><![CDATA[No Thanks.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj plainTxt="False" ><![CDATA[My account.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:12]]></Time>
+<TimeTick>1308657252</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="163" Source="Action1" SourceLine="78" >
+<Disp><![CDATA[My account.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="159" Source="Action1" SourceLine="77" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T59">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:13]]></Time>
+<TimeTick>1308657253</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="165" Source="Action1" SourceLine="81" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T60">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:15]]></Time>
+<TimeTick>1308657255</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="167" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T61">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:15]]></Time>
+<TimeTick>1308657255</TimeTick>
+<Step rID="T62">
+<Obj plainTxt="False" ><![CDATA[My Profile.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:15]]></Time>
+<TimeTick>1308657255</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="171" Source="Action1" SourceLine="83" >
+<Disp><![CDATA[My Profile.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="170" Source="Action1" SourceLine="83" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T63">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:16]]></Time>
+<TimeTick>1308657256</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="173" Source="Action1" SourceLine="86" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T64">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:18]]></Time>
+<TimeTick>1308657258</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="175" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T65">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:18]]></Time>
+<TimeTick>1308657258</TimeTick>
+<Step rID="T66">
+<Obj plainTxt="False" ><![CDATA[My Donations.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:18]]></Time>
+<TimeTick>1308657258</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="179" Source="Action1" SourceLine="88" >
+<Disp><![CDATA[My Donations.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="178" Source="Action1" SourceLine="88" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T67">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:19]]></Time>
+<TimeTick>1308657259</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="181" Source="Action1" SourceLine="91" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T68">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:21]]></Time>
+<TimeTick>1308657261</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="183" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T69">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:21]]></Time>
+<TimeTick>1308657261</TimeTick>
+<Step rID="T70">
+<Obj plainTxt="False" ><![CDATA[Account Settings.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:21]]></Time>
+<TimeTick>1308657261</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="187" Source="Action1" SourceLine="93" >
+<Disp><![CDATA[Account Settings.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="186" Source="Action1" SourceLine="93" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T71">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:22]]></Time>
+<TimeTick>1308657262</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="189" Source="Action1" SourceLine="96" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T72">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:24]]></Time>
+<TimeTick>1308657264</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="191" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T73">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:24]]></Time>
+<TimeTick>1308657264</TimeTick>
+<Step rID="T74">
+<Obj plainTxt="False" ><![CDATA[My Saved Cards.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:24]]></Time>
+<TimeTick>1308657264</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="195" Source="Action1" SourceLine="98" >
+<Disp><![CDATA[My Saved Cards.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="194" Source="Action1" SourceLine="98" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T75">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:25]]></Time>
+<TimeTick>1308657265</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="197" Source="Action1" SourceLine="101" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T76">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:27]]></Time>
+<TimeTick>1308657267</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="199" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T77">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:27]]></Time>
+<TimeTick>1308657267</TimeTick>
+<Step rID="T78">
+<Obj plainTxt="False" ><![CDATA[donate > Find and support.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:27]]></Time>
+<TimeTick>1308657267</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="203" Source="Action1" SourceLine="103" >
+<Disp><![CDATA[donate > Find and support.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="202" Source="Action1" SourceLine="103" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T79">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:28]]></Time>
+<TimeTick>1308657268</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="205" Source="Action1" SourceLine="106" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T80">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:31]]></Time>
+<TimeTick>1308657271</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="207" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T81">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:31]]></Time>
+<TimeTick>1308657271</TimeTick>
+<Step rID="T82">
+<Obj plainTxt="False" ><![CDATA["kw"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (2 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=text<br>name=kw<br>micclass=WebEdit<br>html tag=INPUT<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (2 objects found)&nbsp;</FONT></u><br>
+type=text<br>micclass=WebEdit<br>html tag=INPUT<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=kw<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>html id=parametricKeyword<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>max length=2147483647<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>default value=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>class=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>rows=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:31]]></Time>
+<TimeTick>1308657271</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="211" Source="Action1" SourceLine="108" >
+<Disp><![CDATA["kw"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T83">
+<Obj plainTxt="False" ><![CDATA[kw.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["TEST ORG1 WITH EIN2"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:31]]></Time>
+<TimeTick>1308657271</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="212" Source="Action1" SourceLine="108" >
+<Disp><![CDATA[kw.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T84">
+<Obj plainTxt="False" ><![CDATA[kw.Submit]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:31]]></Time>
+<TimeTick>1308657271</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="215" Source="Action1" SourceLine="109" >
+<Disp><![CDATA[kw.Submit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T85">
+<Obj plainTxt="False" ><![CDATA[TEST ORG1 WITH EIN2.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:45]]></Time>
+<TimeTick>1308657285</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="240" Source="Action1" SourceLine="110" >
+<Disp><![CDATA[TEST ORG1 WITH EIN2.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="210" Source="Action1" SourceLine="108" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T86">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:45]]></Time>
+<TimeTick>1308657285</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="242" Source="Action1" SourceLine="114" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T87">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:24:48]]></Time>
+<TimeTick>1308657288</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="244" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T88">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:09]]></Time>
+<TimeTick>1308657309</TimeTick>
+<Step rID="T89">
+<Obj plainTxt="False" ><![CDATA["donation[amount]"- Description mismatch]]></Obj>
+<Details plainTxt="False" ><![CDATA[The object was not found using the test object description. Check the object's properties.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:09]]></Time>
+<TimeTick>1308657309</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="289" status="Warning" Source="Action1" SourceLine="116" >
+<Disp><![CDATA["donation[amount]"- Description mismatch]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T90">
+<Obj plainTxt="False" ><![CDATA["donation[amount]"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=text<br>name=order_user_order[donations_attributes][0][amount]<br>micclass=WebEdit<br>html tag=INPUT<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (5 objects found)&nbsp;</FONT></u><br>
+type=text<br>micclass=WebEdit<br>html tag=INPUT<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=order_user_order[donations_attributes][0][amount]<SPAN class=Failed> (Skipped)</SPAN><br>html id=donation_amount<SPAN class=Failed> (Skipped)</SPAN><br>max length=2147483647<SPAN class=passed> (Used</SPAN>, 5 matches)</SPAN><br>default value=30.00<SPAN class=Failed> (Skipped)</SPAN><br>class=<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>rows=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:09]]></Time>
+<TimeTick>1308657309</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="290" Source="Action1" SourceLine="116" >
+<Disp><![CDATA["donation[amount]"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T91">
+<Obj plainTxt="False" ><![CDATA[donation[amount].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["30"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:09]]></Time>
+<TimeTick>1308657309</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="291" Source="Action1" SourceLine="116" >
+<Disp><![CDATA[donation[amount].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T92">
+<Obj plainTxt="False" ><![CDATA[Donate.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:09]]></Time>
+<TimeTick>1308657309</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="294" Source="Action1" SourceLine="117" >
+<Disp><![CDATA[Donate.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="288" status="Warning" Source="Action1" SourceLine="116" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T93">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:09]]></Time>
+<TimeTick>1308657309</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="296" Source="Action1" SourceLine="121" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T94">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:12]]></Time>
+<TimeTick>1308657312</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="298" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T95">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:12]]></Time>
+<TimeTick>1308657312</TimeTick>
+<Step rID="T96">
+<Obj plainTxt="False" ><![CDATA[donation[amount].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["30.00"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:12]]></Time>
+<TimeTick>1308657312</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="302" Source="Action1" SourceLine="123" >
+<Disp><![CDATA[donation[amount].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T97">
+<Obj plainTxt="False" ><![CDATA[tip_amount.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["5.00"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:12]]></Time>
+<TimeTick>1308657312</TimeTick>
+<NodeArgs eType="Replay" icon="16" nRep="305" Source="Action1" SourceLine="124" >
+<Disp><![CDATA[tip_amount.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T98">
+<Obj plainTxt="False" ><![CDATA[tip_amount]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the tip_amount object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:12]]></Time>
+<TimeTick>1308657312</TimeTick>
+<Step rID="T99">
+<Obj plainTxt="False" ><![CDATA[tip_amount]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebRadioGroup<br>Html Tag = INPUT<br>|Visible = -1<br>Name = tip_amount<br>Items Count = 4<br>Html Id = tip_amount_300<br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:12]]></Time>
+<TimeTick>1308657312</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="307" status="Warning" nType="Description" Source="Action1" SourceLine="124" >
+<Disp><![CDATA[tip_amount]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="16" nRep="306" status="Failed" nType="Run Error" Source="Action1" SourceLine="124" >
+<Disp><![CDATA[tip_amount]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="301" status="Failed" Source="Action1" SourceLine="123" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="64" status="Failed" Source="Action1" SourceLine="51" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T100">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the tip_amount object. Confirm that the specified item is included in the object's item collection.<BR>Line (125): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebRadioGroup(&quot;tip_amount&quot;).Select &quot;5.00&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:12]]></Time>
+<TimeTick>1308657312</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="308" status="Failed" Source="Action1" SourceLine="124" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T101">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<Step rID="T102">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<Step rID="T103">
+<Obj plainTxt="False" ><![CDATA[tip_amount.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["5.00"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="16" nRep="313" Source="Action1" SourceLine="124" >
+<Disp><![CDATA[tip_amount.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T104">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_2.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Hp Razoo"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="316" Source="Action1" SourceLine="125" >
+<Disp><![CDATA[order_user_order[credit_card_a_2.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T105">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Wood RidgeDrive"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="319" Source="Action1" SourceLine="126" >
+<Disp><![CDATA[order_user_order[credit_card_a.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T106">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_3.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Washington DC"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="322" Source="Action1" SourceLine="127" >
+<Disp><![CDATA[order_user_order[credit_card_a_3.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T107">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_4.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["Washington"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="15" nRep="325" Source="Action1" SourceLine="128" >
+<Disp><![CDATA[order_user_order[credit_card_a_4.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T108">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_5.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["20001"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="328" Source="Action1" SourceLine="129" >
+<Disp><![CDATA[order_user_order[credit_card_a_5.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T109">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_6.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["5555555555554444"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="331" Source="Action1" SourceLine="130" >
+<Disp><![CDATA[order_user_order[credit_card_a_6.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T110">
+<Obj plainTxt="False" ><![CDATA[order_user_order[credit_card_a_7.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["123"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="334" Source="Action1" SourceLine="131" >
+<Disp><![CDATA[order_user_order[credit_card_a_7.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T111">
+<Obj plainTxt="False" ><![CDATA[Donate Now.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="337" Source="Action1" SourceLine="132" >
+<Disp><![CDATA[Donate Now.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="312" Source="Action1" SourceLine="124" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T112">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:52]]></Time>
+<TimeTick>1308657352</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="339" Source="Action1" SourceLine="136" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T113">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:55]]></Time>
+<TimeTick>1308657355</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="341" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T114">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:56]]></Time>
+<TimeTick>1308657356</TimeTick>
+<Step rID="T115">
+<Obj plainTxt="False" ><![CDATA[No Thanks.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:56]]></Time>
+<TimeTick>1308657356</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="345" Source="Action1" SourceLine="138" >
+<Disp><![CDATA[No Thanks.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="344" Source="Action1" SourceLine="138" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T116">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:56]]></Time>
+<TimeTick>1308657356</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="347" Source="Action1" SourceLine="143" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T117">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:59]]></Time>
+<TimeTick>1308657359</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="349" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T118">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:59]]></Time>
+<TimeTick>1308657359</TimeTick>
+<Step rID="T119">
+<Obj plainTxt="False" ><![CDATA[fundraise > Start raising.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:59]]></Time>
+<TimeTick>1308657359</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="353" Source="Action1" SourceLine="145" >
+<Disp><![CDATA[fundraise > Start raising.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="352" Source="Action1" SourceLine="145" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T120">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:25:59]]></Time>
+<TimeTick>1308657359</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="355" Source="Action1" SourceLine="149" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T121">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:02]]></Time>
+<TimeTick>1308657362</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="357" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T122">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:02]]></Time>
+<TimeTick>1308657362</TimeTick>
+<Step rID="T123">
+<Obj plainTxt="False" ><![CDATA[Start a fundraiser.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:02]]></Time>
+<TimeTick>1308657362</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="361" Source="Action1" SourceLine="151" >
+<Disp><![CDATA[Start a fundraiser.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="360" Source="Action1" SourceLine="151" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T124">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:12]]></Time>
+<TimeTick>1308657372</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="363" Source="Action1" SourceLine="157" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T125">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:15]]></Time>
+<TimeTick>1308657375</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="365" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T126">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:15]]></Time>
+<TimeTick>1308657375</TimeTick>
+<Step rID="T127">
+<Obj plainTxt="False" ><![CDATA[org_picker_kw.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Org"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:15]]></Time>
+<TimeTick>1308657375</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="369" Source="Action1" SourceLine="159" >
+<Disp><![CDATA[org_picker_kw.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T128">
+<Obj plainTxt="False" ><![CDATA[org_picker_kw.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["TEST ORG1 WITH EIN2"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:15]]></Time>
+<TimeTick>1308657375</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="372" Source="Action1" SourceLine="160" >
+<Disp><![CDATA[org_picker_kw.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T129">
+<Obj plainTxt="False" ><![CDATA[story[title].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Fr page"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:15]]></Time>
+<TimeTick>1308657375</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="375" Source="Action1" SourceLine="161" >
+<Disp><![CDATA[story[title].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T130">
+<Obj plainTxt="False" ><![CDATA[Create Fundraiser.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:15]]></Time>
+<TimeTick>1308657375</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="378" Source="Action1" SourceLine="163" >
+<Disp><![CDATA[Create Fundraiser.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="368" Source="Action1" SourceLine="159" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T131">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:15]]></Time>
+<TimeTick>1308657375</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="380" Source="Action1" SourceLine="168" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T132">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:18]]></Time>
+<TimeTick>1308657378</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="382" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T133">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:39]]></Time>
+<TimeTick>1308657399</TimeTick>
+<Step rID="T134">
+<Obj plainTxt="False" ><![CDATA[Edit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the object "Edit" (of class Link). Verify that this object's properties match an object currently displayed in your application.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:39]]></Time>
+<TimeTick>1308657399</TimeTick>
+<Step rID="T135">
+<Obj plainTxt="False" ><![CDATA[Edit]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = Link<br>Html Tag = A<br>|Visible = -1<br>Text = Edit<br>Name = Edit<br>Html Id = <br>Href = http://www-qaindia.razoo.com/story/Fr-Page/edit<br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:39]]></Time>
+<TimeTick>1308657399</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="429" status="Warning" nType="Description" Source="Action1" SourceLine="170" >
+<Disp><![CDATA[Edit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="9" nRep="428" status="Failed" nType="Run Error" Source="Action1" SourceLine="170" >
+<Disp><![CDATA[Edit]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="427" status="Failed" Source="Action1" SourceLine="170" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="311" status="Failed" Source="Action1" SourceLine="124" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T136">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the object &quot;Edit&quot; (of class Link). Verify that this object's properties match an object currently displayed in your application.<BR>Line (171): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).Link(&quot;Edit&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:26:39]]></Time>
+<TimeTick>1308657399</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="430" status="Failed" Source="Action1" SourceLine="170" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T137">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:48]]></Time>
+<TimeTick>1308657468</TimeTick>
+<Step rID="T138">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:48]]></Time>
+<TimeTick>1308657468</TimeTick>
+<Step rID="T139">
+<Obj plainTxt="False" ><![CDATA[Edit.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:48]]></Time>
+<TimeTick>1308657468</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="435" Source="Action1" SourceLine="170" >
+<Disp><![CDATA[Edit.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="434" Source="Action1" SourceLine="170" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T140">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:48]]></Time>
+<TimeTick>1308657468</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="437" Source="Action1" SourceLine="174" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T141">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:51]]></Time>
+<TimeTick>1308657471</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="439" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T142">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:51]]></Time>
+<TimeTick>1308657471</TimeTick>
+<Step rID="T143">
+<Obj plainTxt="False" ><![CDATA[story[short_description].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Fr page"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:51]]></Time>
+<TimeTick>1308657471</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="443" Source="Action1" SourceLine="176" >
+<Disp><![CDATA[story[short_description].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T144">
+<Obj plainTxt="False" ><![CDATA["WebElement"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (16 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>micclass=WebElement<br>innertext=<br>html tag=SPAN<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (22 objects found)&nbsp;</FONT></u><br>
+micclass=WebElement<br>html tag=SPAN<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+html id=<SPAN class=passed> (Used</SPAN>, 21 matches)</SPAN><br>class=mceIcon mce_code<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>innertext=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:51]]></Time>
+<TimeTick>1308657471</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="446" Source="Action1" SourceLine="177" >
+<Disp><![CDATA["WebElement"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T145">
+<Obj plainTxt="False" ><![CDATA[WebElement.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:51]]></Time>
+<TimeTick>1308657471</TimeTick>
+<NodeArgs eType="Replay" icon="17" nRep="447" Source="Action1" SourceLine="177" >
+<Disp><![CDATA[WebElement.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="442" Source="Action1" SourceLine="176" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="433" Source="Action1" SourceLine="170" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T146">
+<Obj plainTxt="False" ><![CDATA[HTML Source Editor]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:55]]></Time>
+<TimeTick>1308657475</TimeTick>
+<Step rID="T147">
+<Obj plainTxt="False" ><![CDATA["HTML Source Editor"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (2 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>micclass=Browser<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (2 objects found)&nbsp;</FONT></u><br>
+micclass=Browser<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=HTML Source Editor<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>title=HTML Source Editor<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>openurl=http://www-qaindia.razoo.com/javascripts/lib/tiny_mce/themes/advanced/source_editor.htm?16e1175be16c3e2afe14cc10770e6b395b1cf44c<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>opentitle={#advanced_dlg.code_title}<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>hasstatusbar=-1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>hasmenubar=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>hastoolbar=-1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>openedbytestingtool=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>number of tabs=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:55]]></Time>
+<TimeTick>1308657475</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="450" Source="Action1" SourceLine="178" >
+<Disp><![CDATA["HTML Source Editor"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T148">
+<Obj plainTxt="False" ><![CDATA[HTML Source Editor]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:55]]></Time>
+<TimeTick>1308657475</TimeTick>
+<Step rID="T149">
+<Obj plainTxt="False" ><![CDATA[htmlSource.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Story for FR Page"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:55]]></Time>
+<TimeTick>1308657475</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="453" Source="Action1" SourceLine="178" >
+<Disp><![CDATA[htmlSource.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T150">
+<Obj plainTxt="False" ><![CDATA[Update.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:27:55]]></Time>
+<TimeTick>1308657475</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="456" Source="Action1" SourceLine="179" >
+<Disp><![CDATA[Update.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="452" Source="Action1" SourceLine="178" >
+<Disp><![CDATA[HTML Source Editor]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="449" Source="Action1" SourceLine="178" >
+<Disp><![CDATA[HTML Source Editor]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T151">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:16]]></Time>
+<TimeTick>1308657496</TimeTick>
+<Step rID="T152">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:16]]></Time>
+<TimeTick>1308657496</TimeTick>
+<Step rID="T153">
+<Obj plainTxt="False" ><![CDATA["story[designation]"- Description mismatch]]></Obj>
+<Details plainTxt="False" ><![CDATA[The object was not found using the test object description. Check the object's properties.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:16]]></Time>
+<TimeTick>1308657496</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="502" status="Warning" Source="Action1" SourceLine="180" >
+<Disp><![CDATA["story[designation]"- Description mismatch]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T154">
+<Obj plainTxt="False" ><![CDATA["story[designation]"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=text<br>name=story[designation]<br>micclass=WebEdit<br>html tag=INPUT<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (8 objects found)&nbsp;</FONT></u><br>
+type=text<br>micclass=WebEdit<br>html tag=INPUT<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=story[designation]<SPAN class=Failed> (Skipped)</SPAN><br>html id=story_designation<SPAN class=Failed> (Skipped)</SPAN><br>max length=75<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>default value=<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>class=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>rows=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:16]]></Time>
+<TimeTick>1308657496</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="503" Source="Action1" SourceLine="180" >
+<Disp><![CDATA["story[designation]"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T155">
+<Obj plainTxt="False" ><![CDATA[story[designation].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Health"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:16]]></Time>
+<TimeTick>1308657496</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="504" Source="Action1" SourceLine="180" >
+<Disp><![CDATA[story[designation].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T156">
+<Obj plainTxt="False" ><![CDATA[Suggestion.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["10"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:16]]></Time>
+<TimeTick>1308657496</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="507" Source="Action1" SourceLine="181" >
+<Disp><![CDATA[Suggestion.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T157">
+<Obj plainTxt="False" ><![CDATA[suggestion_desc.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Food"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:16]]></Time>
+<TimeTick>1308657496</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="510" Source="Action1" SourceLine="182" >
+<Disp><![CDATA[suggestion_desc.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T158">
+<Obj plainTxt="False" ><![CDATA[story[goal].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["200"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:16]]></Time>
+<TimeTick>1308657496</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="513" Source="Action1" SourceLine="183" >
+<Disp><![CDATA[story[goal].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T159">
+<Obj plainTxt="False" ><![CDATA["Update Information"- Description mismatch]]></Obj>
+<Details plainTxt="False" ><![CDATA[The object was not found using the test object description. Check the object's properties.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:37]]></Time>
+<TimeTick>1308657517</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="557" status="Warning" Source="Action1" SourceLine="184" >
+<Disp><![CDATA["Update Information"- Description mismatch]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T160">
+<Obj plainTxt="False" ><![CDATA["Update Information"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=submit<br>name=Update Information<br>micclass=WebButton<br>html tag=BUTTON<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (2 objects found)&nbsp;</FONT></u><br>
+micclass=WebButton<br>html tag=BUTTON<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=Update Information<SPAN class=Failed> (Skipped)</SPAN><br>type=submit<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>html id=<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>value=<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>class=<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:37]]></Time>
+<TimeTick>1308657517</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="558" Source="Action1" SourceLine="184" >
+<Disp><![CDATA["Update Information"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T161">
+<Obj plainTxt="False" ><![CDATA[Update Information.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:37]]></Time>
+<TimeTick>1308657517</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="559" Source="Action1" SourceLine="184" >
+<Disp><![CDATA[Update Information.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T162">
+<Obj plainTxt="False" ><![CDATA[Images/Videos.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:28:39]]></Time>
+<TimeTick>1308657519</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="562" Source="Action1" SourceLine="187" >
+<Disp><![CDATA[Images/Videos.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T163">
+<Obj plainTxt="False" ><![CDATA["story[story_image]"- Description mismatch]]></Obj>
+<Details plainTxt="False" ><![CDATA[The object was not found using the test object description. Check the object's properties.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:00]]></Time>
+<TimeTick>1308657540</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="606" status="Warning" Source="Action1" SourceLine="188" >
+<Disp><![CDATA["story[story_image]"- Description mismatch]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T164">
+<Obj plainTxt="False" ><![CDATA["story[story_image]"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=file<br>name=story[story_image]<br>micclass=WebFile<br>html tag=INPUT<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (1 objects found)&nbsp;</FONT></u><br>
+micclass=WebFile<br>html tag=INPUT<br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:00]]></Time>
+<TimeTick>1308657540</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="607" Source="Action1" SourceLine="188" >
+<Disp><![CDATA["story[story_image]"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T165">
+<Obj plainTxt="False" ><![CDATA[story[story_image].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["C:\Documents and Settings\All Users\Documents\My Pictures\Sample Pictures\Chrysanthemum.jpg"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:01]]></Time>
+<TimeTick>1308657541</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="608" Source="Action1" SourceLine="188" >
+<Disp><![CDATA[story[story_image].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T166">
+<Obj plainTxt="False" ><![CDATA["Update Information"- Description mismatch]]></Obj>
+<Details plainTxt="False" ><![CDATA[The object was not found using the test object description. Check the object's properties.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:23]]></Time>
+<TimeTick>1308657563</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="652" status="Warning" Source="Action1" SourceLine="189" >
+<Disp><![CDATA["Update Information"- Description mismatch]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T167">
+<Obj plainTxt="False" ><![CDATA["Update Information"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>type=submit<br>name=Update Information<br>micclass=WebButton<br>html tag=BUTTON<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (2 objects found)&nbsp;</FONT></u><br>
+micclass=WebButton<br>html tag=BUTTON<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=Update Information<SPAN class=Failed> (Skipped)</SPAN><br>type=submit<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>html id=<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>value=<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>class=<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:23]]></Time>
+<TimeTick>1308657563</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="653" Source="Action1" SourceLine="189" >
+<Disp><![CDATA["Update Information"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T168">
+<Obj plainTxt="False" ><![CDATA[Update Information.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:23]]></Time>
+<TimeTick>1308657563</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="654" Source="Action1" SourceLine="189" >
+<Disp><![CDATA[Update Information.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="501" status="Warning" Source="Action1" SourceLine="180" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T169">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:23]]></Time>
+<TimeTick>1308657563</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="656" Source="Action1" SourceLine="192" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T170">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:25]]></Time>
+<TimeTick>1308657565</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="658" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T171">
+<Obj plainTxt="False" ><![CDATA[Fr page - Razoo]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:26]]></Time>
+<TimeTick>1308657566</TimeTick>
+<Step rID="T172">
+<Obj plainTxt="False" ><![CDATA[My account.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:26]]></Time>
+<TimeTick>1308657566</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="662" Source="Action1" SourceLine="194" >
+<Disp><![CDATA[My account.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="661" Source="Action1" SourceLine="194" >
+<Disp><![CDATA[Fr page - Razoo]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T173">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to_11]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:27]]></Time>
+<TimeTick>1308657567</TimeTick>
+<Step rID="T174">
+<Obj plainTxt="False" ><![CDATA[My Saved Cards.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:27]]></Time>
+<TimeTick>1308657567</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="666" Source="Action1" SourceLine="195" >
+<Disp><![CDATA[My Saved Cards.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="665" Source="Action1" SourceLine="195" >
+<Disp><![CDATA[An inspiring place to_11]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T175">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:27]]></Time>
+<TimeTick>1308657567</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="668" Source="Action1" SourceLine="196" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T176">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:30]]></Time>
+<TimeTick>1308657570</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="670" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T177">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to_11]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:30]]></Time>
+<TimeTick>1308657570</TimeTick>
+<Step rID="T178">
+<Obj plainTxt="False" ><![CDATA[My Profile.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:30]]></Time>
+<TimeTick>1308657570</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="674" Source="Action1" SourceLine="198" >
+<Disp><![CDATA[My Profile.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T179">
+<Obj plainTxt="False" ><![CDATA[Fr page.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:31]]></Time>
+<TimeTick>1308657571</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="677" Source="Action1" SourceLine="199" >
+<Disp><![CDATA[Fr page.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="673" Source="Action1" SourceLine="198" >
+<Disp><![CDATA[An inspiring place to_11]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T180">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:31]]></Time>
+<TimeTick>1308657571</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="679" Source="Action1" SourceLine="203" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T181">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:34]]></Time>
+<TimeTick>1308657574</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="681" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T182">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:34]]></Time>
+<TimeTick>1308657574</TimeTick>
+<Step rID="T183">
+<Obj plainTxt="False" ><![CDATA[Matching Grants.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:34]]></Time>
+<TimeTick>1308657574</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="685" Source="Action1" SourceLine="205" >
+<Disp><![CDATA[Matching Grants.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T184">
+<Obj plainTxt="False" ><![CDATA[View.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:35]]></Time>
+<TimeTick>1308657575</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="688" Source="Action1" SourceLine="206" >
+<Disp><![CDATA[View.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T185">
+<Obj plainTxt="False" ><![CDATA["Share"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (2 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>text=Share<br>micclass=Link<br>html tag=A<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (48 objects found)&nbsp;</FONT></u><br>
+micclass=Link<br>html tag=A<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+text=Share<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>html id=<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>class=button<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>name=Share<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>href=http://www-qaindia.razoo.com/story/Fr-Page/share<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:36]]></Time>
+<TimeTick>1308657576</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="691" Source="Action1" SourceLine="207" >
+<Disp><![CDATA["Share"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T186">
+<Obj plainTxt="False" ><![CDATA[Share.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:36]]></Time>
+<TimeTick>1308657576</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="692" Source="Action1" SourceLine="207" >
+<Disp><![CDATA[Share.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="684" Source="Action1" SourceLine="205" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T187">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:38]]></Time>
+<TimeTick>1308657578</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="694" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T188">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:39]]></Time>
+<TimeTick>1308657579</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="696" Source="Action1" SourceLine="212" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T189">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:41]]></Time>
+<TimeTick>1308657581</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="698" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T190">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:41]]></Time>
+<TimeTick>1308657581</TimeTick>
+<Step rID="T191">
+<Obj plainTxt="False" ><![CDATA[Donations.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:41]]></Time>
+<TimeTick>1308657581</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="702" Source="Action1" SourceLine="214" >
+<Disp><![CDATA[Donations.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="701" Source="Action1" SourceLine="214" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T192">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:41]]></Time>
+<TimeTick>1308657581</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="704" Source="Action1" SourceLine="218" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T193">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:44]]></Time>
+<TimeTick>1308657584</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="706" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T194">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:44]]></Time>
+<TimeTick>1308657584</TimeTick>
+<Step rID="T195">
+<Obj plainTxt="False" ><![CDATA[Log out.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:44]]></Time>
+<TimeTick>1308657584</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="710" Source="Action1" SourceLine="220" >
+<Disp><![CDATA[Log out.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="709" Source="Action1" SourceLine="220" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T196">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:45]]></Time>
+<TimeTick>1308657585</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="712" Source="Action1" SourceLine="224" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T197">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:47]]></Time>
+<TimeTick>1308657587</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="714" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T198">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:48]]></Time>
+<TimeTick>1308657588</TimeTick>
+<Step rID="T199">
+<Obj plainTxt="False" ><![CDATA[Log in.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:48]]></Time>
+<TimeTick>1308657588</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="718" Source="Action1" SourceLine="226" >
+<Disp><![CDATA[Log in.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="717" Source="Action1" SourceLine="226" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T200">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to_13]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:48]]></Time>
+<TimeTick>1308657588</TimeTick>
+<Step rID="T201">
+<Obj plainTxt="False" ><![CDATA[user_session[email].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["brian@razoo.com"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:48]]></Time>
+<TimeTick>1308657588</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="722" Source="Action1" SourceLine="227" >
+<Disp><![CDATA[user_session[email].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T202">
+<Obj plainTxt="False" ><![CDATA[user_session[password].SetSecure]]></Obj>
+<Details plainTxt="False" ><![CDATA["4d3d4053e45d51781c4373b151e5953c7e00"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:48]]></Time>
+<TimeTick>1308657588</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="725" Source="Action1" SourceLine="228" >
+<Disp><![CDATA[user_session[password].SetSecure]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T203">
+<Obj plainTxt="False" ><![CDATA[Log in.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:48]]></Time>
+<TimeTick>1308657588</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="728" Source="Action1" SourceLine="229" >
+<Disp><![CDATA[Log in.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="721" Source="Action1" SourceLine="227" >
+<Disp><![CDATA[An inspiring place to_13]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T204">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:48]]></Time>
+<TimeTick>1308657588</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="730" Source="Action1" SourceLine="233" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T205">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:51]]></Time>
+<TimeTick>1308657591</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="732" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T206">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to http://www-qaindia.razoo.com/admin<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:51]]></Time>
+<TimeTick>1308657591</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="734" nType="Navigate to http://www-qaindia.razoo.com/admin" Source="Action1" SourceLine="235" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T207">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:51]]></Time>
+<TimeTick>1308657591</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="736" Source="Action1" SourceLine="238" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T208">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:54]]></Time>
+<TimeTick>1308657594</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="738" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T209">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to http://www-qaindia.razoo.com/homepage_marquees<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:54]]></Time>
+<TimeTick>1308657594</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="740" nType="Navigate to http://www-qaindia.razoo.com/homepage_marquees" Source="Action1" SourceLine="240" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T210">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:55]]></Time>
+<TimeTick>1308657595</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="742" Source="Action1" SourceLine="245" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T211">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:58]]></Time>
+<TimeTick>1308657598</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="744" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T212">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:58]]></Time>
+<TimeTick>1308657598</TimeTick>
+<Step rID="T213">
+<Obj plainTxt="False" ><![CDATA[New Marquee.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:58]]></Time>
+<TimeTick>1308657598</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="748" Source="Action1" SourceLine="247" >
+<Disp><![CDATA[New Marquee.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="747" Source="Action1" SourceLine="247" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T214">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:29:58]]></Time>
+<TimeTick>1308657598</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="750" Source="Action1" SourceLine="248" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T215">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:00]]></Time>
+<TimeTick>1308657600</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="752" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T216">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:01]]></Time>
+<TimeTick>1308657601</TimeTick>
+<Step rID="T217">
+<Obj plainTxt="False" ><![CDATA[Cancel.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:01]]></Time>
+<TimeTick>1308657601</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="756" Source="Action1" SourceLine="250" >
+<Disp><![CDATA[Cancel.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="755" Source="Action1" SourceLine="250" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T218">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to http://www-qaindia.razoo.com/admin/find_user<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:02]]></Time>
+<TimeTick>1308657602</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="758" nType="Navigate to http://www-qaindia.razoo.com/admin/find_user" Source="Action1" SourceLine="254" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T219">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:02]]></Time>
+<TimeTick>1308657602</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="760" Source="Action1" SourceLine="255" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T220">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:05]]></Time>
+<TimeTick>1308657605</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="762" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T221">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/org_admins<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:05]]></Time>
+<TimeTick>1308657605</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="764" nType="Navigate to https://www-qaindia.razoo.com/admin/org_admins" Source="Action1" SourceLine="260" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T222">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:06]]></Time>
+<TimeTick>1308657606</TimeTick>
+<Step rID="T223">
+<Obj plainTxt="False" ><![CDATA[email.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["HPRazoo3@sra.com"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:06]]></Time>
+<TimeTick>1308657606</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="768" Source="Action1" SourceLine="261" >
+<Disp><![CDATA[email.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T224">
+<Obj plainTxt="False" ><![CDATA[ein.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["123456789"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:06]]></Time>
+<TimeTick>1308657606</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="771" Source="Action1" SourceLine="262" >
+<Disp><![CDATA[ein.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T225">
+<Obj plainTxt="False" ><![CDATA[Create Admin.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:06]]></Time>
+<TimeTick>1308657606</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="774" Source="Action1" SourceLine="263" >
+<Disp><![CDATA[Create Admin.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="767" Source="Action1" SourceLine="261" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T226">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:06]]></Time>
+<TimeTick>1308657606</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="776" Source="Action1" SourceLine="264" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T227">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:09]]></Time>
+<TimeTick>1308657609</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="778" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T228">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/orders<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:09]]></Time>
+<TimeTick>1308657609</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="780" nType="Navigate to https://www-qaindia.razoo.com/admin/orders" Source="Action1" SourceLine="269" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T229">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:09]]></Time>
+<TimeTick>1308657609</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="782" Source="Action1" SourceLine="270" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T230">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:12]]></Time>
+<TimeTick>1308657612</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="784" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T231">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:12]]></Time>
+<TimeTick>1308657612</TimeTick>
+<Step rID="T232">
+<Obj plainTxt="False" ><![CDATA[number.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["23"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:12]]></Time>
+<TimeTick>1308657612</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="788" Source="Action1" SourceLine="272" >
+<Disp><![CDATA[number.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T233">
+<Obj plainTxt="False" ><![CDATA[Find Order.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:12]]></Time>
+<TimeTick>1308657612</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="791" Source="Action1" SourceLine="273" >
+<Disp><![CDATA[Find Order.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="787" Source="Action1" SourceLine="272" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T234">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:12]]></Time>
+<TimeTick>1308657612</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="793" Source="Action1" SourceLine="276" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T235">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:15]]></Time>
+<TimeTick>1308657615</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="795" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T236">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:15]]></Time>
+<TimeTick>1308657615</TimeTick>
+<Step rID="T237">
+<Obj plainTxt="False" ><![CDATA[Resend Receipt.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:15]]></Time>
+<TimeTick>1308657615</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="799" Source="Action1" SourceLine="278" >
+<Disp><![CDATA[Resend Receipt.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T238">
+<Obj plainTxt="False" ><![CDATA[Send Receipt.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:15]]></Time>
+<TimeTick>1308657615</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="802" Source="Action1" SourceLine="279" >
+<Disp><![CDATA[Send Receipt.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T239">
+<Obj plainTxt="False" ><![CDATA[Refund Order.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:16]]></Time>
+<TimeTick>1308657616</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="805" Source="Action1" SourceLine="280" >
+<Disp><![CDATA[Refund Order.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="798" Source="Action1" SourceLine="278" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T240">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:17]]></Time>
+<TimeTick>1308657617</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="807" Source="Action1" SourceLine="281" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T241">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:19]]></Time>
+<TimeTick>1308657619</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="809" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T242">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/disbursements/new<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:20]]></Time>
+<TimeTick>1308657620</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="811" nType="Navigate to https://www-qaindia.razoo.com/admin/disbursements/new" Source="Action1" SourceLine="288" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T243">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:20]]></Time>
+<TimeTick>1308657620</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="813" Source="Action1" SourceLine="289" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T244">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:23]]></Time>
+<TimeTick>1308657623</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="815" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T245">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/disbursement_adjustment_types<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:23]]></Time>
+<TimeTick>1308657623</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="817" nType="Navigate to https://www-qaindia.razoo.com/admin/disbursement_adjustment_types" Source="Action1" SourceLine="293" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T246">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:23]]></Time>
+<TimeTick>1308657623</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="819" Source="Action1" SourceLine="294" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T247">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:26]]></Time>
+<TimeTick>1308657626</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="821" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T248">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:26]]></Time>
+<TimeTick>1308657626</TimeTick>
+<Step rID="T249">
+<Obj plainTxt="False" ><![CDATA[+ Add a new type.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:26]]></Time>
+<TimeTick>1308657626</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="825" Source="Action1" SourceLine="298" >
+<Disp><![CDATA[+ Add a new type.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="824" Source="Action1" SourceLine="298" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T250">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:26]]></Time>
+<TimeTick>1308657626</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="827" Source="Action1" SourceLine="299" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T251">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:29]]></Time>
+<TimeTick>1308657629</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="829" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T252">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:29]]></Time>
+<TimeTick>1308657629</TimeTick>
+<Step rID="T253">
+<Obj plainTxt="False" ><![CDATA[Cancel.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:29]]></Time>
+<TimeTick>1308657629</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="833" Source="Action1" SourceLine="301" >
+<Disp><![CDATA[Cancel.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="832" Source="Action1" SourceLine="301" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T254">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/disbursement_exports/new<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:29]]></Time>
+<TimeTick>1308657629</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="835" nType="Navigate to https://www-qaindia.razoo.com/admin/disbursement_exports/new" Source="Action1" SourceLine="306" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T255">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:30]]></Time>
+<TimeTick>1308657630</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="837" Source="Action1" SourceLine="307" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T256">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:33]]></Time>
+<TimeTick>1308657633</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="839" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T257">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/reports<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:33]]></Time>
+<TimeTick>1308657633</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="841" nType="Navigate to https://www-qaindia.razoo.com/admin/reports" Source="Action1" SourceLine="311" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T258">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:33]]></Time>
+<TimeTick>1308657633</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="843" Source="Action1" SourceLine="312" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T259">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:36]]></Time>
+<TimeTick>1308657636</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="845" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T260">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:36]]></Time>
+<TimeTick>1308657636</TimeTick>
+<Step rID="T261">
+<Obj plainTxt="False" ><![CDATA[report_type.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["Audits Report"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:36]]></Time>
+<TimeTick>1308657636</TimeTick>
+<NodeArgs eType="Replay" icon="15" nRep="849" Source="Action1" SourceLine="314" >
+<Disp><![CDATA[report_type.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T262">
+<Obj plainTxt="False" ><![CDATA[Run Report.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:36]]></Time>
+<TimeTick>1308657636</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="852" Source="Action1" SourceLine="315" >
+<Disp><![CDATA[Run Report.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="848" Source="Action1" SourceLine="314" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T263">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:36]]></Time>
+<TimeTick>1308657636</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="854" Source="Action1" SourceLine="316" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T264">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:39]]></Time>
+<TimeTick>1308657639</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="856" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T265">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/irs_masters_imports<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:39]]></Time>
+<TimeTick>1308657639</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="858" nType="Navigate to https://www-qaindia.razoo.com/admin/irs_masters_imports" Source="Action1" SourceLine="320" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T266">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:39]]></Time>
+<TimeTick>1308657639</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="860" Source="Action1" SourceLine="321" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T267">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:42]]></Time>
+<TimeTick>1308657642</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="862" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T268">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/organizations/new<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:42]]></Time>
+<TimeTick>1308657642</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="864" nType="Navigate to https://www-qaindia.razoo.com/admin/organizations/new" Source="Action1" SourceLine="326" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T269">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:42]]></Time>
+<TimeTick>1308657642</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="866" Source="Action1" SourceLine="327" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T270">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:45]]></Time>
+<TimeTick>1308657645</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="868" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T271">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:45]]></Time>
+<TimeTick>1308657645</TimeTick>
+<Step rID="T272">
+<Obj plainTxt="False" ><![CDATA[org[ein].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["123451235"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:45]]></Time>
+<TimeTick>1308657645</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="872" Source="Action1" SourceLine="329" >
+<Disp><![CDATA[org[ein].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T273">
+<Obj plainTxt="False" ><![CDATA[org[name].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["ORG FOR JS1"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:45]]></Time>
+<TimeTick>1308657645</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="875" Source="Action1" SourceLine="330" >
+<Disp><![CDATA[org[name].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T274">
+<Obj plainTxt="False" ><![CDATA[org[city].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Washington DC"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:45]]></Time>
+<TimeTick>1308657645</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="878" Source="Action1" SourceLine="331" >
+<Disp><![CDATA[org[city].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T275">
+<Obj plainTxt="False" ><![CDATA[org[state].Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["Washington"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:46]]></Time>
+<TimeTick>1308657646</TimeTick>
+<NodeArgs eType="Replay" icon="15" nRep="881" Source="Action1" SourceLine="332" >
+<Disp><![CDATA[org[state].Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T276">
+<Obj plainTxt="False" ><![CDATA[Create_org creation.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:46]]></Time>
+<TimeTick>1308657646</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="884" Source="Action1" SourceLine="333" >
+<Disp><![CDATA[Create_org creation.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="871" Source="Action1" SourceLine="329" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T277">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:46]]></Time>
+<TimeTick>1308657646</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="886" Source="Action1" SourceLine="336" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T278">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:30:49]]></Time>
+<TimeTick>1308657649</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="888" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T279">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:03]]></Time>
+<TimeTick>1308657663</TimeTick>
+<Step rID="T280">
+<Obj plainTxt="False" ><![CDATA[Data Sources.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:03]]></Time>
+<TimeTick>1308657663</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="918" Source="Action1" SourceLine="340" >
+<Disp><![CDATA[Data Sources.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="917" Source="Action1" SourceLine="340" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T281">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:03]]></Time>
+<TimeTick>1308657663</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="920" Source="Action1" SourceLine="341" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T282">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:06]]></Time>
+<TimeTick>1308657666</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="922" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T283">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:06]]></Time>
+<TimeTick>1308657666</TimeTick>
+<Step rID="T284">
+<Obj plainTxt="False" ><![CDATA[Audits.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:06]]></Time>
+<TimeTick>1308657666</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="926" Source="Action1" SourceLine="345" >
+<Disp><![CDATA[Audits.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="925" Source="Action1" SourceLine="345" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T285">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:06]]></Time>
+<TimeTick>1308657666</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="928" Source="Action1" SourceLine="346" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T286">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:09]]></Time>
+<TimeTick>1308657669</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="930" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T287">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/organizations/Org-For-Js1/audits<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:09]]></Time>
+<TimeTick>1308657669</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="932" nType="Navigate to https://www-qaindia.razoo.com/organizations/Org-For-Js1/audits" Source="Action1" SourceLine="348" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T288">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:10]]></Time>
+<TimeTick>1308657670</TimeTick>
+<Step rID="T289">
+<Obj plainTxt="False" ><![CDATA["Verify"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (2 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>text=Verify<br>micclass=Link<br>html tag=A<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (41 objects found)&nbsp;</FONT></u><br>
+micclass=Link<br>html tag=A<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+text=Verify<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>html id=<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>class=<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>name=Verify<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>href=https://www-qaindia.razoo.com/organizations/Org-For-Js1/audits/new?audit_status=1&audit_type=Audit%3A%3ARazooAudit<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:10]]></Time>
+<TimeTick>1308657670</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="936" Source="Action1" SourceLine="351" >
+<Disp><![CDATA["Verify"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T290">
+<Obj plainTxt="False" ><![CDATA[Verify.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:10]]></Time>
+<TimeTick>1308657670</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="937" Source="Action1" SourceLine="351" >
+<Disp><![CDATA[Verify.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T291">
+<Obj plainTxt="False" ><![CDATA[audit[details].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Test"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:10]]></Time>
+<TimeTick>1308657670</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="940" Source="Action1" SourceLine="352" >
+<Disp><![CDATA[audit[details].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T292">
+<Obj plainTxt="False" ><![CDATA[Create.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:11]]></Time>
+<TimeTick>1308657671</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="943" Source="Action1" SourceLine="353" >
+<Disp><![CDATA[Create.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="935" Source="Action1" SourceLine="351" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T293">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:11]]></Time>
+<TimeTick>1308657671</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="945" Source="Action1" SourceLine="354" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T294">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:14]]></Time>
+<TimeTick>1308657674</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="947" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T295">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to http://www-qaindia.razoo.com/admin/verify_authorize_net_log<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:14]]></Time>
+<TimeTick>1308657674</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="949" nType="Navigate to http://www-qaindia.razoo.com/admin/verify_authorize_net_log" Source="Action1" SourceLine="356" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T296">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:14]]></Time>
+<TimeTick>1308657674</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="951" Source="Action1" SourceLine="359" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T297">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:17]]></Time>
+<TimeTick>1308657677</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="953" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T298">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/guest_orders<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:17]]></Time>
+<TimeTick>1308657677</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="955" nType="Navigate to https://www-qaindia.razoo.com/admin/guest_orders" Source="Action1" SourceLine="361" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T299">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:17]]></Time>
+<TimeTick>1308657677</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="957" Source="Action1" SourceLine="364" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T300">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:20]]></Time>
+<TimeTick>1308657680</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="959" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T301">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/admin/order_blacklists<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:20]]></Time>
+<TimeTick>1308657680</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="961" nType="Navigate to https://www-qaindia.razoo.com/admin/order_blacklists" Source="Action1" SourceLine="366" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T302">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:20]]></Time>
+<TimeTick>1308657680</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="963" Source="Action1" SourceLine="369" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T303">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:23]]></Time>
+<TimeTick>1308657683</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="965" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T304">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to http://www-qaindia.razoo.com/admin/abingo_dashboard<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:23]]></Time>
+<TimeTick>1308657683</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="967" nType="Navigate to http://www-qaindia.razoo.com/admin/abingo_dashboard" Source="Action1" SourceLine="371" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T305">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:23]]></Time>
+<TimeTick>1308657683</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="969" Source="Action1" SourceLine="374" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T306">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:26]]></Time>
+<TimeTick>1308657686</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="971" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T307">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Navigate to https://www-qaindia.razoo.com/team/new<br>Target Frame: _top<br>Post Data: <br>HTTP Headers: ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:26]]></Time>
+<TimeTick>1308657686</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="973" nType="Navigate to https://www-qaindia.razoo.com/team/new" Source="Action1" SourceLine="378" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T308">
+<Obj plainTxt="False" ><![CDATA[msctls_statusbar32.DblClick]]></Obj>
+<Details plainTxt="False" ><![CDATA[100, 11]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:27]]></Time>
+<TimeTick>1308657687</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="975" Source="Action1" SourceLine="379" >
+<Disp><![CDATA[msctls_statusbar32.DblClick]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T309">
+<Obj plainTxt="False" ><![CDATA[[ Window ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:30]]></Time>
+<TimeTick>1308657690</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="977" Source="Action1" SourceLine="9" >
+<Disp><![CDATA[[ Window ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T310">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:30]]></Time>
+<TimeTick>1308657690</TimeTick>
+<Step rID="T311">
+<Obj plainTxt="False" ><![CDATA[org_picker_kw.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Alliance Community Fund"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:30]]></Time>
+<TimeTick>1308657690</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="981" Source="Action1" SourceLine="381" >
+<Disp><![CDATA[org_picker_kw.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T312">
+<Obj plainTxt="False" ><![CDATA[campaign[title].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Champ Alli"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:30]]></Time>
+<TimeTick>1308657690</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="984" Source="Action1" SourceLine="382" >
+<Disp><![CDATA[campaign[title].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T313">
+<Obj plainTxt="False" ><![CDATA["WebElement"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (17 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>micclass=WebElement<br>innertext=<br>html tag=SPAN<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (19 objects found)&nbsp;</FONT></u><br>
+micclass=WebElement<br>html tag=SPAN<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+html id=<SPAN class=passed> (Used</SPAN>, 18 matches)</SPAN><br>class=mceIcon mce_code<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>innertext=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:30]]></Time>
+<TimeTick>1308657690</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="987" Source="Action1" SourceLine="383" >
+<Disp><![CDATA["WebElement"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T314">
+<Obj plainTxt="False" ><![CDATA[WebElement.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:30]]></Time>
+<TimeTick>1308657690</TimeTick>
+<NodeArgs eType="Replay" icon="17" nRep="988" Source="Action1" SourceLine="383" >
+<Disp><![CDATA[WebElement.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="980" Source="Action1" SourceLine="381" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="500" status="Warning" Source="Action1" SourceLine="180" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T315">
+<Obj plainTxt="False" ><![CDATA[HTML Source Editor]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:31]]></Time>
+<TimeTick>1308657691</TimeTick>
+<Step rID="T316">
+<Obj plainTxt="False" ><![CDATA["HTML Source Editor"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (2 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>micclass=Browser<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (2 objects found)&nbsp;</FONT></u><br>
+micclass=Browser<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=HTML Source Editor<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>title=HTML Source Editor<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>openurl=http://www-qaindia.razoo.com/javascripts/lib/tiny_mce/themes/advanced/source_editor.htm?16e1175be16c3e2afe14cc10770e6b395b1cf44c<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>opentitle={#advanced_dlg.code_title}<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>hasstatusbar=-1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>hasmenubar=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>hastoolbar=-1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>openedbytestingtool=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>number of tabs=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:31]]></Time>
+<TimeTick>1308657691</TimeTick>
+<NodeArgs eType="Replay" icon="13" nRep="991" Source="Action1" SourceLine="384" >
+<Disp><![CDATA["HTML Source Editor"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T317">
+<Obj plainTxt="False" ><![CDATA[HTML Source Editor]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:31]]></Time>
+<TimeTick>1308657691</TimeTick>
+<Step rID="T318">
+<Obj plainTxt="False" ><![CDATA[htmlSource.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Story for FR Page"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:31]]></Time>
+<TimeTick>1308657691</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="994" Source="Action1" SourceLine="384" >
+<Disp><![CDATA[htmlSource.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T319">
+<Obj plainTxt="False" ><![CDATA[Update.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:31]]></Time>
+<TimeTick>1308657691</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="997" Source="Action1" SourceLine="385" >
+<Disp><![CDATA[Update.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="993" Source="Action1" SourceLine="384" >
+<Disp><![CDATA[HTML Source Editor]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="990" Source="Action1" SourceLine="384" >
+<Disp><![CDATA[HTML Source Editor]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T320">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:31]]></Time>
+<TimeTick>1308657691</TimeTick>
+<Step rID="T321">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:31]]></Time>
+<TimeTick>1308657691</TimeTick>
+<Step rID="T322">
+<Obj plainTxt="False" ><![CDATA[campaign[goal_amount].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["1000"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:31]]></Time>
+<TimeTick>1308657691</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1002" Source="Action1" SourceLine="386" >
+<Disp><![CDATA[campaign[goal_amount].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T323">
+<Obj plainTxt="False" ><![CDATA[campaign[start_at].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Jun 9, 2011"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:31]]></Time>
+<TimeTick>1308657691</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1005" Source="Action1" SourceLine="387" >
+<Disp><![CDATA[campaign[start_at].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T324">
+<Obj plainTxt="False" ><![CDATA[campaign[end_at].Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Dec 31, 2011"]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:32]]></Time>
+<TimeTick>1308657692</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="1008" Source="Action1" SourceLine="388" >
+<Disp><![CDATA[campaign[end_at].Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T325">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:32]]></Time>
+<TimeTick>1308657692</TimeTick>
+<Step rID="T326">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:32]]></Time>
+<TimeTick>1308657692</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1012" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1011" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1001" status="Failed" Source="Action1" SourceLine="386" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1000" status="Failed" Source="Action1" SourceLine="386" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T327">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:32]]></Time>
+<TimeTick>1308657692</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1013" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T328">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:57]]></Time>
+<TimeTick>1308657717</TimeTick>
+<Step rID="T329">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:57]]></Time>
+<TimeTick>1308657717</TimeTick>
+<Step rID="T330">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:57]]></Time>
+<TimeTick>1308657717</TimeTick>
+<Step rID="T331">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:57]]></Time>
+<TimeTick>1308657717</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1019" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1018" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1017" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1016" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T332">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:31:57]]></Time>
+<TimeTick>1308657717</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1020" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T333">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:39]]></Time>
+<TimeTick>1308657759</TimeTick>
+<Step rID="T334">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:39]]></Time>
+<TimeTick>1308657759</TimeTick>
+<Step rID="T335">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:39]]></Time>
+<TimeTick>1308657759</TimeTick>
+<Step rID="T336">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:39]]></Time>
+<TimeTick>1308657759</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1027" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1026" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1025" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1024" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T337">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:39]]></Time>
+<TimeTick>1308657759</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1028" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T338">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:52]]></Time>
+<TimeTick>1308657772</TimeTick>
+<Step rID="T339">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:52]]></Time>
+<TimeTick>1308657772</TimeTick>
+<Step rID="T340">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:52]]></Time>
+<TimeTick>1308657772</TimeTick>
+<Step rID="T341">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:52]]></Time>
+<TimeTick>1308657772</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1034" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1033" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1032" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1031" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T342">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:32:52]]></Time>
+<TimeTick>1308657772</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1035" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T343">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:49]]></Time>
+<TimeTick>1308657889</TimeTick>
+<Step rID="T344">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:49]]></Time>
+<TimeTick>1308657889</TimeTick>
+<Step rID="T345">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:49]]></Time>
+<TimeTick>1308657889</TimeTick>
+<Step rID="T346">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:49]]></Time>
+<TimeTick>1308657889</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1041" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1040" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1039" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1038" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T347">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:49]]></Time>
+<TimeTick>1308657889</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1042" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T348">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<Step rID="T349">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<Step rID="T350">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<Step rID="T351">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1048" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1047" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1046" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1045" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T352">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1049" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T353">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<Step rID="T354">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<Step rID="T355">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<Step rID="T356">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1055" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1054" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1053" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1052" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T357">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:34:53]]></Time>
+<TimeTick>1308657893</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1056" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T358">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:13]]></Time>
+<TimeTick>1308657913</TimeTick>
+<Step rID="T359">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:13]]></Time>
+<TimeTick>1308657913</TimeTick>
+<Step rID="T360">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:13]]></Time>
+<TimeTick>1308657913</TimeTick>
+<Step rID="T361">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:13]]></Time>
+<TimeTick>1308657913</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1062" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1061" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1060" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1059" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T362">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:13]]></Time>
+<TimeTick>1308657913</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1063" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T363">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:14]]></Time>
+<TimeTick>1308657914</TimeTick>
+<Step rID="T364">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:14]]></Time>
+<TimeTick>1308657914</TimeTick>
+<Step rID="T365">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:14]]></Time>
+<TimeTick>1308657914</TimeTick>
+<Step rID="T366">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:14]]></Time>
+<TimeTick>1308657914</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1069" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1068" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1067" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1066" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T367">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:14]]></Time>
+<TimeTick>1308657914</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1070" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T368">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<Step rID="T369">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<Step rID="T370">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<Step rID="T371">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1076" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1075" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1074" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1073" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T372">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1077" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T373">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<Step rID="T374">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<Step rID="T375">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<Step rID="T376">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1083" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1082" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1081" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1080" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T377">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:35:15]]></Time>
+<TimeTick>1308657915</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1084" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T378">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:36:54]]></Time>
+<TimeTick>1308658014</TimeTick>
+<Step rID="T379">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:36:54]]></Time>
+<TimeTick>1308658014</TimeTick>
+<Step rID="T380">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:36:54]]></Time>
+<TimeTick>1308658014</TimeTick>
+<Step rID="T381">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:36:54]]></Time>
+<TimeTick>1308658014</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1090" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1089" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1088" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1087" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T382">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:36:54]]></Time>
+<TimeTick>1308658014</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1091" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T383">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Browser]]></Details>
+<Time><![CDATA[6/21/2011 - 17:37:42]]></Time>
+<TimeTick>1308658062</TimeTick>
+<Step rID="T384">
+<Obj plainTxt="False" ><![CDATA[An inspiring place to]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/21/2011 - 17:37:42]]></Time>
+<TimeTick>1308658062</TimeTick>
+<Step rID="T385">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:37:42]]></Time>
+<TimeTick>1308658062</TimeTick>
+<Step rID="T386">
+<Obj plainTxt="False" ><![CDATA[campaign[designation]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>miccommentproperty = <br>Mercury Class = WebList<br>Html Tag = SELECT<br>|Visible Items = 0<br>Visible = -1<br>Name = campaign[designation]<br>Items Count = 2<br>Html Id = campaign_designation<br>default value = <br>DHTML Class = <br>]]></Details>
+<Time><![CDATA[6/21/2011 - 17:37:42]]></Time>
+<TimeTick>1308658062</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1098" status="Warning" nType="Description" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="15" nRep="1097" status="Failed" nType="Run Error" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[campaign[designation]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="1096" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="1095" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[An inspiring place to]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T387">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot identify the specified item of the campaign[designation] object. Confirm that the specified item is included in the object's item collection.<BR>Line (390): &quot;Browser(&quot;An inspiring place to&quot;).Page(&quot;An inspiring place to&quot;).WebList(&quot;campaign[designation]&quot;).Select &quot;Other&quot;&quot;. ]]></Details>
+<Time><![CDATA[6/21/2011 - 17:37:42]]></Time>
+<TimeTick>1308658062</TimeTick>
+<NodeArgs eType="Replay" icon="14" nRep="1099" status="Failed" Source="Action1" SourceLine="389" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T388">
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:37:59]]></Time>
+<TimeTick>1308658079</TimeTick>
+<NodeArgs eType="General" icon="18" nRep="1100" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="6/21/2011 - 17:18:50" eTime="6/21/2011 - 17:37:59" passed="0" failed="37" warnings="21" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[JSIssue Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Step rID="T389">
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[6/21/2011 - 17:37:59]]></Time>
+<TimeTick>1308658079</TimeTick>
+<NodeArgs eType="General" icon="19" nRep="1103" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="6/21/2011 - 17:18:49" eTime="6/21/2011 - 17:37:59" passed="0" failed="37" warnings="21" stopped="True" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test JSIssue Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>
