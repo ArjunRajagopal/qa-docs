@@ -1,0 +1,970 @@
+>ruby Razoo_Test_Suite_Explorer.rb
+Started at: Mon Apr 30 14:24:19 +0530 2012 seconds
+Total WorkSheet count in Excel: 1
+Row count is : 55
+Today's date : 30
+Old Static Value in Excel: 581.0
+New Static Value in Excel: 582
+New EIN in Excel: 333333793
+Loaded suite Razoo_Test_Suite_Explorer
+Started
+************** START : Invoke Razoo Application ****************
+Passed. Razoo Site gets invoked successfully!
+************** END : Invoke Razoo Application ****************
+.---------------------- START OF SCENARIO 1 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create a New ORG ****************
+CreateORG button Top position : 603
+UI Check : Fail. CreateORG button is not present at the correct position in CreateNPO screen.
+Passed. New ORG : New Razoo IE Org582 for Release 2.5 successfully created.
+************** END : Create a New ORG ****************
+************** START: Edit NPO Details ****************
+Step 1 : Modify the NPO details
+Save button Top position : 3025
+UI Check : Fail. Save button is not present at the correct position in EditORG screen.
+Step 2 : Passed. NPO Details was successfully changed and saved.
+************** END: Edit NPO Details ****************
+************** START: Verify the Audit ****************
+VerifyAudit link Top position : 256
+UI Check : Fail. VerifyAudit link is not present at the correct position in Audits screen.
+CreateAudit button Top position : 573
+UI Check : Fail. CreateAudit button is not present at the correct position in VerifyAudit screen.
+Audit created successfully
+Passed. Now, ORG is Verified.
+************** END: Verify the Audit ****************
+************** START: Verify NPO Details ****************
+Updated Phone Number gets diplayed in the Story page.
+Updated EIN Number gets diplayed in the Story page.
+Updated Address 1 gets diplayed in the Story page.
+Updated Address 2 gets diplayed in the Story page.
+Passed. Tell Your Story link is displayed under NPO Completion Steps section.
+Passed. Illustrate Your Story link is displayed under NPO Completion Steps section.
+Passed. Share It With Others link is displayed under NPO Completion Steps section.
+************** END: Verify NPO Details ****************
+************** START: Become a Fan - Explicit ****************
+BecomeFan link Top position : 994
+UI Check : Fail. BecomeFan link is not present at the correct position in ORGStory screen.
+Passed. I'm a Fan of New Razoo IE Org582 for Release 2.5 story :)
+************** END: Become a Fan - Explicit ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 1 --------------------------
+Duration: 209.98201 seconds
+---------------------- START OF SCENARIO 2 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create a New ORG with No EIN ****************
+Passed. New ORG successfully created.
+************** END : Create a New ORG with No EIN ****************
+************** START: Edit NPO Details ****************
+Step 1 : Modify the NPO details
+Save button Top position : 3025
+UI Check : Fail. Save button is not present at the correct position in EditORG screen.
+Step 2 : Passed. NPO Details was successfully changed and saved.
+************** END: Edit NPO Details ****************
+************** START: Verify the Audit ****************
+VerifyAudit link Top position : 256
+UI Check : Fail. VerifyAudit link is not present at the correct position in Audits screen.
+CreateAudit button Top position : 573
+UI Check : Fail. CreateAudit button is not present at the correct position in VerifyAudit screen.
+Audit created successfully
+Passed. Now, ORG is Verified.
+************** END: Verify the Audit ****************
+************** START: Verify NPO Details ****************
+Updated Phone Number gets diplayed in the Story page.
+EIN number is not updated.
+Updated Address 1 gets diplayed in the Story page.
+Updated Address 2 gets diplayed in the Story page.
+Passed. Tell Your Story link is displayed under NPO Completion Steps section.
+Passed. Illustrate Your Story link is displayed under NPO Completion Steps section.
+Passed. Share It With Others link is displayed under NPO Completion Steps section.
+************** END: Verify NPO Details ****************
+************** START: Become a Fan - Explicit ****************
+BecomeFan link Top position : 994
+UI Check : Fail. BecomeFan link is not present at the correct position in ORGStory screen.
+Passed. I'm a Fan of New Razoo IE Org582 for Release 2.5 story :)
+************** END: Become a Fan - Explicit ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 2 --------------------------
+Duration: 383.42293 seconds
+---------------------- START OF SCENARIO 3 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create a New ORG ****************
+CreateORG button Top position : 603
+UI Check : Fail. CreateORG button is not present at the correct position in CreateNPO screen.
+Passed. New ORG : New Razoo2 IE Org582 for Release 2.5 successfully created.
+************** END : Create a New ORG ****************
+************** START: Edit NPO Details ****************
+Step 1 : Modify the NPO details
+Save button Top position : 3025
+UI Check : Fail. Save button is not present at the correct position in EditORG screen.
+Step 2 : Passed. NPO Details was successfully changed and saved.
+************** END: Edit NPO Details ****************
+************** START: Verify the Audit ****************
+VerifyAudit link Top position : 256
+UI Check : Fail. VerifyAudit link is not present at the correct position in Audits screen.
+CreateAudit button Top position : 573
+UI Check : Fail. CreateAudit button is not present at the correct position in VerifyAudit screen.
+Audit created successfully
+Passed. Now, ORG is Verified.
+************** END: Verify the Audit ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 3 --------------------------
+Duration: 495.216325 seconds
+---------------------- START OF SCENARIO 4 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create a New ORG ****************
+CreateORG button Top position : 603
+UI Check : Fail. CreateORG button is not present at the correct position in CreateNPO screen.
+Passed. New ORG : New Razoo3 IE Org582 for Release 2.5 successfully created.
+************** END : Create a New ORG ****************
+************** START: Edit NPO Details ****************
+Step 1 : Modify the NPO details
+Save button Top position : 3025
+UI Check : Fail. Save button is not present at the correct position in EditORG screen.
+Step 2 : Passed. NPO Details was successfully changed and saved.
+************** END: Edit NPO Details ****************
+************** START: Verify the Audit ****************
+VerifyAudit link Top position : 256
+UI Check : Fail. VerifyAudit link is not present at the correct position in Audits screen.
+CreateAudit button Top position : 573
+UI Check : Fail. CreateAudit button is not present at the correct position in VerifyAudit screen.
+Audit created successfully
+Passed. Now, ORG is Verified.
+************** END: Verify the Audit ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 4 --------------------------
+Duration: 602.971488 seconds
+------------------------ START OF SCENARIO 5 --------------------
+************** START: Search ORG ****************
+Donate button Top position : 91
+UI Check : Fail. Donate button is not present at the correct position in Home screen.
+Project checkbox Top position : 176
+UI Check : Fail. Project checkbox is not present at the correct position in Search screen.
+FR checkbox Top position : 176
+UI Check : Fail. FR checkbox is not present at the correct position in Search screen.
+Step 1 : Type Harvard College in the Search Field
+Search button Top position : 133
+UI Check : Fail. Search button is not present at the correct position in Search screen.
+Step 2 : Click on Harvard College link
+Step 3 : Passed. User reached Harvard College Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Make a donation using New Card ****************
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $10.00
+Failed. Problem in reaching the Donation Form page.
+Entered amount $10.00 gets displayed in the DF screen.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - , Name on Card - Normal1 User582, 4111111111111111
+, normaluser1@razooIE582.com
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 1173
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and Guest User Account created and landed in Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Post Comment ****************
+Post button Top position : 752
+UI Check : Fail. Post button is not present at the correct position in ThankYou screen.
+Step 1 : Passed. Donor's comment posted Successfully.
+************** START : Share page - Normal User ****************
+Passed. User has successfully reached the Share page.
+Mydonations link Top position : 499
+UI Check : Fail. Imdone link is not present at the correct position in Share screen.
+************** END : Share page - Normal User ****************
+Step 2 : Passed. Posted comment is displayed successfully in My Profile screen.
+************** END : Post Comment ****************
+************** START : Check My Donation ****************
+My Account link Top position : 8
+UI Check : Fail. MyAccount link is not present at the correct position in Home screen.
+Step 1 : Verify NPO category icons in the Profile screen.
+Pass. Animals category icon is displayed in the Profile screen.
+Pass. Animal heading is displayed under 'supported the following causes' section.
+Pass. Harvard College link is present under 'supported the following causes' section.
+Step 2 : Verify Default help text in the Profile screen.
+Pass. 'Your profile is currently blank...' help text is displayed in the Profile screen for this user.
+Step 3 : Verify donation details under Recent Activity section.
+Success!. My donation record gets displayed under 'Recent Activity' section.
+Failure!. My donation Amount doesn't get displayed under 'Recent Activity' screen.
+Mydonations link Top position : 255
+UI Check : Fail. Mydonations link is not present at the correct position in Account screen.
+Step 4 : Verify donation details under Donation History section.
+Failure!. My donation Amount doesn't get displayed under 'My Donation' screen.
+************** END : Check My Donation ****************
+************** START : Check Guest User Saved Card ****************
+@@@@@@@@@ FAILED @@@@@@@@@. Guest User's Card is not stored in Profile screen.
+************** END : Check Guest User Saved Card ****************
+************** START : Reset my password ****************
+Account Settings link Top position : 256
+UI Check : Fail. AccountSettings link is not present at the correct position in MyAccount screen.
+Step 1: Enter password and password confirmation
+Pass. 'Send me the monthly Razoo newsletter' checkbox is not present in the Razoo/GiveMN Signup screen.
+Save Changes button Top position : 483
+UI Check : Fail. SaveChanges button is not present at the correct position in AccountSettings screen.
+Step 2: Passed. Account updated successfully
+************** END : Reset my password ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+------------------------ END OF SCENARIO 5 --------------------
+Duration: 909.67103 seconds
+------------------------  START OF SCENARIO 6 ----------------------- 
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE582.com and Password as 123456
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search ORG ****************
+Donate button Top position : 7
+UI Check : Fail. Donate button is not present at the correct position in Home screen.
+Project checkbox Top position : 141
+UI Check : Fail. Project checkbox is not present at the correct position in Search screen.
+FR checkbox Top position : 141
+UI Check : Fail. FR checkbox is not present at the correct position in Search screen.
+Step 1 : Type Harvard College in the Search Field
+Search button Top position : 98
+UI Check : Fail. Search button is not present at the correct position in Search screen.
+Step 2 : Click on Harvard College link
+Step 3 : Passed. User reached Harvard College Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Create Story Page ****************
+Step 1 : Entering valid details for creating Story page
+Step 2 : Passed. Fundraiser for New Razoo IE Org582 for Release 2.5 created successfully!
+Step 3 : Passed. Tell Your Story link is displayed under FR/PRO Completion Steps section.
+Step 4 : Passed. Illustrate Your Story link is displayed under FR/PRO Completion Steps section.
+Step 5 : Passed. Set Your Goals link is displayed under FR/PRO Completion Steps section.
+Step 6 : Passed. Share It With Others link is displayed under FR/PRO Completion Steps section.
+CreateStory button Top position : 1402
+UI Check : Fail. CreateStory button is not present at the correct position in Createstory screen.
+SetYourGoals link Top position : 349
+UI Check : Fail. SetGoals link is not present at the correct position in Story screen.
+Passed. Thank donor message and video gets saved successfully.
+ThankDonor link Top position : 349
+UI Check : Fail. ThankDonor link is not present at the correct position in Story screen.
+Passed. Thank donor message and video gets saved successfully.
+Illustrate link Top position : 189
+UI Check : Fail. Illustrate link is not present at the correct position in Story screen.
+Step 7.1 : Upload valid youtube and vimeo video.
+Save button Top position : 698
+UI Check : Fail. Save button is not present at the correct position in Imagevideo screen.
+Step 7.2 : Upload valid image
+Step 8 : Passed. Uploaded video gets saved successfully!
+View link Top position : 248
+UI Check : Fail. View link is not present at the correct position in Story screen.
+Step 9 : Passed. Uploaded video gets displayed successfully in Thumbnail section of Story page.
+Step 10 : Passed. Admin links are available in the Created Fundraiser for New Razoo IE Org582 for Release 2.5 page
+Step 11 : Passed. 80% complete label gets displayed in Fundraiser completion steps progress bar.
+Pass. 'Add image or video' image is displayed under gallery section of story page.
+************** END : Create Story Page ****************
+************** START : Make a donation using New Card ****************
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $11.50
+Failed. Problem in reaching the Donation Form page.
+Entered amount $11.50 gets displayed in the DF screen.
+Failed. User First name & Last name doesn't get displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - , Name on Card - Normal1 User582, 4111111111111111
+, normaluser1@razooIE582.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 1096
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Post Comment ****************
+Post button Top position : 756
+UI Check : Fail. Post button is not present at the correct position in ThankYou screen.
+Step 1 : Passed. Donor's comment posted Successfully.
+************** START : Share page - Normal User ****************
+Passed. User has successfully reached the Share page.
+Mydonations link Top position : 499
+UI Check : Fail. Imdone link is not present at the correct position in Share screen.
+************** END : Share page - Normal User ****************
+Step 2 : Passed. Posted comment is displayed successfully in My Profile screen.
+************** END : Post Comment ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+------------------------  END OF SCENARIO 6 ----------------------- 
+Duration: 1390.692543 seconds
+---------------------- START OF SCENARIO 7 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Grant ORG Admin rights ****************
+CreateAdmin button Top position : 529
+UI Check : Fail. CreateAdmin button is not present at the correct position in NewOrgAdmins screen.
+Passed. Org Admin successfully created for normaluser1@razooIE582.com user
+************** END : Grant ORG Admin rights ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE582.com and Password as 123456
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create Story Page ****************
+Pass. My organization link is displayed at the header.
+MyNPO link Top position : 11
+UI Check : Fail. My organization link is not present at the correct position in Home screen.
+CreateFR button Top position : 1125
+UI Check : Fail. Fundraise button is not present at the correct position in Story screen.
+Step 1 : Entering valid details for creating Story page
+Step 2 : Passed. Project of New Razoo IE Org582 for Release 2.5 created successfully!
+Step 3 : Passed. Tell Your Story link is displayed under FR/PRO Completion Steps section.
+Step 4 : Passed. Illustrate Your Story link is displayed under FR/PRO Completion Steps section.
+Step 5 : Passed. Set Your Goals link is displayed under FR/PRO Completion Steps section.
+Step 6 : Passed. Share It With Others link is displayed under FR/PRO Completion Steps section.
+SetYourGoals link Top position : 370
+UI Check : Fail. SetGoals link is not present at the correct position in Story screen.
+Passed. Thank donor message and video gets saved successfully.
+ThankDonor link Top position : 370
+UI Check : Fail. ThankDonor link is not present at the correct position in Story screen.
+Passed. Thank donor message and video gets saved successfully.
+Illustrate link Top position : 210
+UI Check : Fail. Illustrate link is not present at the correct position in Story screen.
+Step 7.1 : Upload valid youtube and vimeo video.
+Save button Top position : 719
+UI Check : Fail. Save button is not present at the correct position in Imagevideo screen.
+Step 7.2 : Upload valid image
+Step 8 : Passed. Uploaded video gets saved successfully!
+View link Top position : 269
+UI Check : Fail. View link is not present at the correct position in Story screen.
+Step 9 : Passed. Uploaded video gets displayed successfully in Thumbnail section of Story page.
+Step 10 : Passed. Admin links are available in the Created Project of New Razoo IE Org582 for Release 2.5 page
+Step 11 : Passed. 80% complete label gets displayed in Fundraiser completion steps progress bar.
+Pass. 'Add image or video' image is displayed under gallery section of story page.
+************** END : Create Story Page ****************
+************** START : Make a donation using saved Card ****************
+Step 1 : Select donation amount
+Failed. Problem in reaching the Donation Form page.
+Passed. Story Header gets displayed in the Donation Form screen.
+$10.00 gets displayed in the DF screen.
+Step 2 : Provide tip amount of $9
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using Saved Card ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 7 --------------------------
+Duration: 2074.214638 seconds
+---------------------- START OF SCENARIO 8 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE582.com and Password as 123456
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search ORG ****************
+Donate button Top position : 7
+UI Check : Fail. Donate button is not present at the correct position in Home screen.
+Project checkbox Top position : 141
+UI Check : Fail. Project checkbox is not present at the correct position in Search screen.
+FR checkbox Top position : 141
+UI Check : Fail. FR checkbox is not present at the correct position in Search screen.
+Step 1 : Type Harvard College in the Search Field
+Search button Top position : 98
+UI Check : Fail. Search button is not present at the correct position in Search screen.
+Step 2 : Click on Harvard College link
+Step 3 : Passed. User reached Harvard College Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Make a donation using Add Credit Card ****************
+Passed. Recurring donation option gets displayed in the Story page.
+Step 1 : Enter donation amount - $10.00
+Failed. Problem in reaching the Donation Form page.
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 2 : Selected suggested amount $10.00 gets displayed in the DF screen.
+Step 3 : Selected a recurring donation
+Failed. User First name & Last name doesn't get displayed in Name on Card field.
+Mon Apr 30 15:01:28 +0530 2012 selenium-client received failure from selenium server:
+requested:
+	cmd=isElementPresent
+	1=tip_amount_0
+	sessionId=2f847831a3fd4830a1c59657e201fc8d
+received:
+	"ERROR: Command execution failure. Please search the user group at https://groups.google.com/forum/#!forum/selenium-users for error details from the log window.  The error message is: 'tagName' is null or not an object"
+	called from C:/Ruby187/lib/ruby/1.8/timeout.rb:67:in `timeout'
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 4 : Entering New Card Details : , 378282246310005
+Step 5 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 6 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using Saved Card ****************
+************** START : Delete Comment ****************
+No Thanks link Top position : 1116
+UI Check : Fail. NoThanks link is not present at the correct position in ThankYou screen.
+Step 1 : Passed. Donor's comment posted Successfully!!
+Step 2 : Passed. Posted link gets displayed successfully under comment section.
+Pass. Youtube image icon is displayed.
+Pass. Vimeo image icon is displayed.
+Step 3: Passed. Successfully deleted the posted comment.
+Step 4 : Passed. Deleted comment doesn't gets displayed in My Account screen.
+************** END : Delete Comment ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 8 --------------------------
+Duration: 2492.472561 seconds
+------- START OF SCENARIO 9 ----------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE582.com and Password as 123456
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Cancel the Recurring Donation ****************
+SavedCards link Top position : 256
+UI Check : Fail. SavedCards link is not present at the correct position in Account screen.
+************** END : Cancel the Recurring Donation ****************
+************** START : Delete my Stored Card ****************
+Passed. My 1st Credit card has been deleted successfully.
+Passed. My 2nd Credit card has been deleted successfully.
+Passed. There is no saved credit cards in Saved Card screen.
+************** END : Delete my Stored Card ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+------- END OF SCENARIO 9 ------------
+Duration: 2617.98374 seconds
+---------------------- START OF SCENARIO 10 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE582.com and Password as 123456
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Reset my password ****************
+Account Settings link Top position : 256
+UI Check : Fail. AccountSettings link is not present at the correct position in MyAccount screen.
+Step 1: Enter password and password confirmation
+Pass. 'Send me the monthly Razoo newsletter' checkbox is not present in the Razoo/GiveMN Signup screen.
+Save Changes button Top position : 483
+UI Check : Fail. SaveChanges button is not present at the correct position in AccountSettings screen.
+Step 2: Passed. Account updated successfully
+************** END : Reset my password ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE582.com and Password as 1234567
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 10 --------------------------
+Duration: 2706.756817 seconds
+---------------------- START OF SCENARIO 11 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Run Hack URL ****************
+Reindex Hack URL is finished running.
+Reindex_all Hack URL is finished running.
+Memcache Hack URL is finished running.
+Regenerate Stats Hack URL is finished running.
+************** END : Run Hack URL ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+************** START: Search ORG ****************
+Donate button Top position : 91
+UI Check : Fail. Donate button is not present at the correct position in Home screen.
+Project checkbox Top position : 176
+UI Check : Fail. Project checkbox is not present at the correct position in Search screen.
+FR checkbox Top position : 176
+UI Check : Fail. FR checkbox is not present at the correct position in Search screen.
+Step 1 : Type New Razoo IE Org582 for Release 2.5 in the Search Field
+Search button Top position : 133
+UI Check : Fail. Search button is not present at the correct position in Search screen.
+Step 2 : Click on New Razoo IE Org582 for Release 2.5 link
+Step 3 : Passed. User reached New Razoo IE Org582 for Release 2.5 Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Goto Donation Form Screen & Click Signup link ****************
+Enter donation amount - $10.00
+Donate button Top position : 393
+UI Check : Fail. Donate button is not present at the correct position in Story screen.
+@@@@@@@@@ FAILED @@@@@@@@@. Step 1 : Failed. Problem in reaching the Donation Form page.
+************** END : Goto Donation Form Screen & Click Signup link ****************
+************** START : Create a Razoo Account ****************
+Click on 'Sign Up' link in the donation form screen.
+Create account link Top position : 433
+UI Check : Fail. Create Account link is not present at the correct position in Donation Form.
+Passed. User has reached the Account creation page successfully.
+Step 1 : Entering  Account creation details
+Pass. 'Send me the monthly Razoo newsletter' checkbox is present in the Razoo Signup screen.
+Create Account button Top position : 559
+UI Check : Fail. CreateAccount button is not present at the correct position in Signup screen.
+Step 2 : Passed. Account has been created successfully! and retained in the Donation Form screen.
+************** END : Create a Razoo Account ****************
+************** START : Make a donation using New Card ****************
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 1 : Entered amount $10.00 gets displayed in the DF screen.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - Normal2 User582, Name on Card - Normal2 User582, 5555555555554444
+, normaluser2@razooIE582.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 1132
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Post Comment ****************
+Post button Top position : 274
+UI Check : Fail. Post button is not present at the correct position in ThankYou screen.
+Step 1 : Passed. Donor's comment posted Successfully.
+************** START : Share page - Normal User ****************
+Passed. User has successfully reached the Share page.
+Mydonations link Top position : 499
+UI Check : Fail. Imdone link is not present at the correct position in Share screen.
+************** END : Share page - Normal User ****************
+Step 2 : Passed. Posted comment is displayed successfully in My Profile screen.
+************** END : Post Comment ****************
+************** START : Check My Donation ****************
+My Account link Top position : 8
+UI Check : Fail. MyAccount link is not present at the correct position in Home screen.
+Step 1 : Verify NPO category icons in the Profile screen.
+Pass. Animals category icon is displayed in the Profile screen.
+Pass. Animal heading is displayed under 'supported the following causes' section.
+Pass. New Razoo IE Org582 for Release 2.5 link is present under 'supported the following causes' section.
+Step 2 : Verify Default help text in the Profile screen.
+Pass. 'Your profile is currently blank...' help text is displayed in the Profile screen for this user.
+Step 3 : Verify donation details under Recent Activity section.
+Success!. My donation record gets displayed under 'Recent Activity' section.
+Failure!. My donation Amount doesn't get displayed under 'Recent Activity' screen.
+Mydonations link Top position : 255
+UI Check : Fail. Mydonations link is not present at the correct position in Account screen.
+Step 4 : Verify donation details under Donation History section.
+Failure!. My donation Amount doesn't get displayed under 'My Donation' screen.
+************** END : Check My Donation ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 11 --------------------------
+Duration: 3334.875744 seconds
+---------------------- START OF SCENARIO 12 ----------------------
+************** START: Search ORG ****************
+Donate button Top position : 91
+UI Check : Fail. Donate button is not present at the correct position in Home screen.
+Project checkbox Top position : 176
+UI Check : Fail. Project checkbox is not present at the correct position in Search screen.
+FR checkbox Top position : 176
+UI Check : Fail. FR checkbox is not present at the correct position in Search screen.
+Step 1 : Type New Razoo IE Org582 for Release 2.5 in the Search Field
+Search button Top position : 133
+UI Check : Fail. Search button is not present at the correct position in Search screen.
+Step 2 : Click on New Razoo IE Org582 for Release 2.5 link
+Step 3 : Passed. User reached New Razoo IE Org582 for Release 2.5 Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Goto Donation Form Screen & Click Login link ****************
+Enter donation amount - $10.00
+Step 1 : Failed. Problem in reaching the Donation Form page.
+Step 2 : Enter valid user credentials - normaluser2@razooIE582.com and 1234567 
+Login button Top position : 556
+UI Check : Fail. Login button is not present at the correct position in DonateForm screen.
+Step 3 : Passed. Login was Successful!!!
+************** END : Goto Donation Form Screen & Click Login link ****************
+************** START : Make a donation using New Card ****************
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 1 : Entered amount $10.00 gets displayed in the DF screen.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - Normal2 User582, Name on Card - Normal2 User582, 5555555555554444
+, normaluser2@razooIE582.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 772
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Post Comment ****************
+Post button Top position : 274
+UI Check : Fail. Post button is not present at the correct position in ThankYou screen.
+Step 1 : Passed. Donor's comment posted Successfully.
+************** START : Share page - Normal User ****************
+Passed. User has successfully reached the Share page.
+Mydonations link Top position : 499
+UI Check : Fail. Imdone link is not present at the correct position in Share screen.
+************** END : Share page - Normal User ****************
+Step 2 : Passed. Posted comment is displayed successfully in My Profile screen.
+************** END : Post Comment ****************
+************** START : Check My Donation ****************
+My Account link Top position : 8
+UI Check : Fail. MyAccount link is not present at the correct position in Home screen.
+Step 1 : Verify NPO category icons in the Profile screen.
+Pass. Animals category icon is displayed in the Profile screen.
+Pass. Animal heading is displayed under 'supported the following causes' section.
+Pass. New Razoo IE Org582 for Release 2.5 link is present under 'supported the following causes' section.
+Step 2 : Verify Default help text in the Profile screen.
+Pass. 'Your profile is currently blank...' help text is displayed in the Profile screen for this user.
+Step 3 : Verify donation details under Recent Activity section.
+Success!. My donation record gets displayed under 'Recent Activity' section.
+Failure!. My donation Amount doesn't get displayed under 'Recent Activity' screen.
+Mydonations link Top position : 255
+UI Check : Fail. Mydonations link is not present at the correct position in Account screen.
+Step 4 : Verify donation details under Donation History section.
+Failure!. My donation Amount doesn't get displayed under 'My Donation' screen.
+************** END : Check My Donation ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 12 --------------------------
+Duration: 3566.279979 seconds
+---------------------- START OF SCENARIO 13 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser2@razooIE582.com and Password as 1234567
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create Team Campaign Page ****************
+Step 1 : Entering valid details for creating Team Campaign page
+CreateTeam button Top position : 1513
+UI Check : Fail. CreateTeam button is not present at the correct position in CreateTeam screen.
+Step 2 : Passed. Team Campaign for Harvard College was created successfully.
+Step 3 : Passed. Entered Campaign goal amount gets displayed in Story page.
+Step 4 : Passed. Entered Campaign title gets displayed in Story page.
+Step 5 : Passed. Count says 'left' label.
+************** END : Create Team Campaign Page ****************
+************** START : Edit Team Campaign Page ****************
+Edit link Top position : 275
+UI Check : Fail. Edit link is not present at the correct position in EditTeam screen.
+Step 1 : Start updating the Team Campaign page.
+UpdateInformation button Top position : 1716
+UI Check : Fail. UpdateInformation button is not present at the correct position in EditTeam screen.
+Step 2 : Team Campaign page gets updated successfully.
+************** END : Edit Team Campaign Page ****************
+************** START : Create FR using Fundraiser Template ****************
+CreateTemplate link Top position : 275
+UI Check : Fail. CreateTemplate link is not present at the correct position in Team screen.
+Passed. User has successfully reached the Fundraiser Template screen.
+CreateTemplate button Top position : 713
+UI Check : Fail. CreateTemplate button is not present at the correct position in Team screen.
+Step 1 : Passed. Fundraiser Template gets created successfully!
+Step 2 : Failed. FR creation failed!
+Step 3 : Failed. Team Campaign icon is not present in the FR story page.
+Finished in 3735.564662 seconds.
+>ruby Razoo_Test_Suite_Explorer.rb
+Started at: Mon Apr 30 15:30:24 +0530 2012 seconds
+Total WorkSheet count in Excel: 1
+Row count is : 55
+Today's date : 30
+Old Static Value in Excel: 582.0
+New Static Value in Excel: 582.0
+New EIN in Excel: 333333796
+Loaded suite Razoo_Test_Suite_Explorer
+Started
+************** START : Invoke Razoo Application ****************
+Passed. Razoo Site gets invoked successfully!
+************** END : Invoke Razoo Application ****************
+.---------------------- START OF SCENARIO 14 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser2@razooIE582.com and Password as 1234567
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create Team Campaign Page ****************
+Step 1 : Entering valid details for creating Team Campaign page
+Creating team... processing icon Success!!
+Step 2 : Passed. Team Campaign for multiple causes was created successfully.
+Step 3 : Passed. Entered Campaign goal amount gets displayed in Story page.
+Step 4 : Passed. Entered Campaign title gets displayed in Story page.
+Step 5 : Passed. Count says 'left' label.
+************** END : Create Team Campaign Page ****************
+************** START : Post Team Comment ****************
+Post button Top position : 495
+UI Check : Fail. Post button is not present at the correct position in Team screen.
+Passed. Team comment gets successfully posted.
+Passed. Team comment gets successfully displayed in the Team page.
+************** END : Post Team Comment ****************
+************** START : Edit Team Campaign Page ****************
+Edit link Top position : 275
+UI Check : Fail. Edit link is not present at the correct position in EditTeam screen.
+Step 1 : Start updating the Team Campaign page.
+UpdateInformation button Top position : 1716
+UI Check : Fail. UpdateInformation button is not present at the correct position in EditTeam screen.
+Step 2 : Team Campaign page gets updated successfully.
+************** END : Edit Team Campaign Page ****************
+************** START : Create FR for Team Camp ****************
+Pass. 'Creating fundraiser...' loading icon is displayed under Join This Team section.
+Step 1 : Entering valid details for creating FR page for Team Campaign.
+Step 2 : Passed. FR gets created successfully!
+Step 3 : Passed. Team Campaign link present in the FR story page.
+Step 4 : Failed. Team Campaign icon is not present in the FR story page.
+Step 5 : Passed. 1st Rank gets displayed in the Story page.
+************** END : Create Team Campaign Page ****************
+************** START : Make a donation using saved Card ****************
+Step 1 : Select donation amount
+Failed. Problem in reaching the Donation Form page.
+Passed. Story Header gets displayed in the Donation Form screen.
+$10.00 gets displayed in the DF screen.
+Step 2 : Provide tip amount of $9
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using Saved Card ****************
+************** START : View Campaign Leaderboard ****************
+Step 1 : Verify amount raised in the Thermometer.
+Step 1 is passed.
+Step 2 : Verify amount raised at the title header.
+Step 2 is passed.
+Step 3 : Verify donor's count at the title header.
+Step 3 is passed.
+Step 4 : Verify fundraiser's count at the title header.
+Step 4 is passed.
+Step 5 : Verify dollars in the Leaderboard.
+Step 5 is passed.
+Step 6 : Verify donors in the Leaderboard.
+Step 6 is passed.
+Step 7 : Verify FR link in the Leaderboard.
+Step 7 is passed.
+Step 8 : Verify FR link under 'Most Recent Donations' frame.
+Step 8 is failed.
+Step 9 : Verify Create your own Team section in Leaderboard
+Step 9 is passed.
+Step 10 : Verify Create your own Team button in Leaderboard
+Step 10 is passed.
+************** END : View Campaign Leaderboard ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 14 ----------------------
+Duration: 341.332523 seconds
+---------------------- START OF SCENARIO 15 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser2@razooIE582.com and Password as 1234567
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Remove FR from Leaderboard ****************
+Passed. Fundraiser is successfully removed from the Team.
+************** END : Remove FR from Leaderboard ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 15 ----------------------
+Duration: 428.011481 seconds
+---------------------- START OF SCENARIO 16 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE582.com and Password as 1234567
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search PROJECT ****************
+ORG checkbox Top position : 141
+UI Check : Fail. ORG checkbox is not present at the correct position in Search screen.
+Step 1 : Type Project of New Razoo IE Org582 for Release 2.5 in the Search Field
+Step 2 : Click on Project of New Razoo IE Org582 for Release 2.5 link
+Step 3 : Passed. User reached Project of New Razoo IE Org582 for Release 2.5 Story Page successfully!!
+************** END : Search PROJECT ****************
+************** START : Donation Widget ****************
+Pass. 'Customize the Donation Widget' link is present in the DW screen.
+Step 1 : Enter donation amount in the First screen.
+DonateNow button Top position : 442
+UI Check : Pass. DonateNow button is present at the correct position in DonateAnywhere screen.
+Step 2 : Enter Billing details in the Second screen.
+Pass. EmailId field is not present in the Donation Widget screen for a loggedin user.
+CardDetails button Top position : 442
+UI Check : Pass. CardDetails button is present at the correct position in DonateAnywhere screen.
+Step 3 : Enter Card details in the Third screen.
+Tip option is not displayed in the donation widget.
+PayNow button Top position : 1726
+UI Check : Fail. PayNow button is not present at the correct position in DonateAnywhere screen.
+Step 4 : Donation was successful. Thank you screen gets displayed.
+Passed. Facebook link is present in the Thank You screen.
+Passed. Twitter link is present in the Thank You screen.
+************** END : Donation Widget ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 16 ----------------------
+Duration: 662.918917 seconds
+---------------------- START OF SCENARIO 17 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE582.com and Password as 1234567
+Login button Top position : 278
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search PROJECT ****************
+ORG checkbox Top position : 141
+UI Check : Fail. ORG checkbox is not present at the correct position in Search screen.
+Step 1 : Type Project of New Razoo IE Org582 for Release 2.5 in the Search Field
+Step 2 : Click on Project of New Razoo IE Org582 for Release 2.5 link
+Step 3 : Passed. User reached Project of New Razoo IE Org582 for Release 2.5 Story Page successfully!!
+************** END : Search PROJECT ****************
+************** START : Create Matching Grant ****************
+MG link Top position : 210
+UI Check : Fail. MG link is not present at the correct position in Story screen.
+AddMG button Top position : 627
+UI Check : Fail. AddMG button is not present at the correct position in MG screen.
+Step 1 : MG gets created successfully.
+Step 2 : MG icon displayed in the story page.
+Step 3 : Correct MG amount - $100 displayed in the MG page.
+Step 4 : Correct MG creator name displayed in the MG page.
+Step 5 : Correct MG amount - $100.00 displayed in the Story page.
+Step 6 : Correct MG creator name displayed in the Story page.
+************** END : Create Matching Grant ****************
+************** START : Make a donation using New Card ****************
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $101.00
+Failed. Problem in reaching the Donation Form page.
+Entered amount $101.00 gets displayed in the DF screen.
+Failed. User First name & Last name doesn't get displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - , Name on Card - Normal1 User582, 4111111111111111
+, normaluser1@razooIE582.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 1125
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Close Matching Grant ****************
+>Exit code: -1073741510

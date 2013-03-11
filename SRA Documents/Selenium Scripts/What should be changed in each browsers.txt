@@ -1,0 +1,17 @@
+In IE:
+Change the editTeamCampaign function,
+
+The code should look like:
+	$browser.click "//a[@id='campaign_about_numlist']/span"
+	$browser.click "//a[@id='campaign_about_indent']/span"
+	$browser.click "//a[@id='campaign_about_outdent']/span"
+	$browser.click "//a[@id='campaign_about_numlist']/span"
+
+In Safari:
+Change tinymice in all the respt function.
+
+The code should look like:
+$browser.type "tinymce", "Story"
+
+In Google Chrome:
+No Change.

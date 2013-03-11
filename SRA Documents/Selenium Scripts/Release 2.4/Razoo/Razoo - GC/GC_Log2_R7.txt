@@ -1,0 +1,345 @@
+---------------------- START OF SCENARIO 20 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooGC794.com and Password as 1234567
+Login button Top position : 285
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search PROJECT ****************
+ORG checkbox Top position : 145
+UI Check : Fail. ORG checkbox is not present at the correct position in Search screen.
+Step 1 : Type Project of New Razoo GC Org794 for Release 2.2 in the Search Field
+Step 2 : Click on Project of New Razoo GC Org794 for Release 2.2 link
+Step 3 : Passed. User reached Project of New Razoo GC Org794 for Release 2.2 Story Page successfully!!
+************** END : Search PROJECT ****************
+************** START : Add/Update a Meetup ****************
+Step 1 : Adding a Meetup
+Pass. Your meetup has been added successfully.
+Pass. Added My Meetup Title gets displayed in the Edit page.
+Pass. Added Florida gets displayed in the Edit page.
+Step 2 : Update my Meetup Location
+Pass. Your meetup has been saved successfully.
+Pass. Updated Washington gets displayed in the Meetup section.
+Pass. Project Setup section with 100% gets displayed in the story page even after it reaches 100% and other things section is ON.
+************** END : Add/Update a Meetup ****************
+************** START : Clear a Meetup ****************
+Step 1 : Clear my Meetup section
+Pass. Your meetup has been cleared successfully.
+Pass. Meetup link again is not displayed under Project Setup section.
+************** END : Clear a Meetup ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 20 ----------------------
+Duration: 362.609375 seconds
+---------------------- START OF SCENARIO 21 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooGC794.com and Password as 1234567
+Login button Top position : 285
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Purchase Giving Card ****************
+Step 1 : Entering all valid details in the Giving Card purchase screen.
+Pass. 'Please note all gift card sales are final. There will be no refunds' content is present.
+Processing purchase... processing icon Success!!
+Step 2 : Pass. User has reached the Thank You screen successfully.
+Pass. Correct information flash text is displayed in the 'Thank You' screen.
+Pass. $10 giving card purchase amount successfully displayed in the Thank You screen.
+Pass. recipientemailGC@aol.com recipient emailId is displayed in the Thank You screen.
+Pass. Recipient Name successfully displayed in the Thank You screen.
+************** END : Purchase Giving Card ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 21 ----------------------
+Duration: 395.8125 seconds
+>ruby Razoo_Test_Suite_GoogleChrome.rb
+Started at: Fri Mar 09 11:27:33 +0530 2012 seconds
+Total WorkSheet count in Excel: 1
+Row count is : 51
+Today's date : 9
+Old Static Value in Excel: 794.0
+New Static Value in Excel: 794.0
+New EIN in Excel: 444444887
+Loaded suite Razoo_Test_Suite_GoogleChrome
+Started
+************** START : Invoke Razoo Application ****************
+Passed. Razoo Site gets invoked successfully!
+************** END : Invoke Razoo Application ****************
+.---------------------- START OF SCENARIO 23 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 285
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search ORG ****************
+Donate button Top position : 9
+UI Check : Fail. Donate button is not present at the correct position in Home screen.
+Project checkbox Top position : 145
+UI Check : Fail. Project checkbox is not present at the correct position in Search screen.
+FR checkbox Top position : 145
+UI Check : Fail. FR checkbox is not present at the correct position in Search screen.
+Step 1 : Type New Razoo GC Org794 for Release 2.2 in the Search Field
+Search button Top position : 97
+UI Check : Fail. Search button is not present at the correct position in Search screen.
+Step 2 : Click on New Razoo GC Org794 for Release 2.2 link
+Step 3 : Passed. User reached New Razoo GC Org794 for Release 2.2 Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Remove ORG Admin rights ****************
+Fri Mar 09 11:29:28 +0530 2012 selenium-client received failure from selenium server:
+requested:
+	cmd=type
+	1=email
+	2=normaluser2@razooGC794.com
+	sessionId=60e07362d9e54c31aa4d1c85de4b8dba
+received:
+	"ERROR: Element email not found"
+	called from C:/Ruby187/lib/ruby/1.8/timeout.rb:67:in `timeout'
+E
+Finished in 113.359375 seconds.
+
+  >ruby Razoo_Test_Suite_GoogleChrome.rb
+Started at: Fri Mar 09 11:35:02 +0530 2012 seconds
+Total WorkSheet count in Excel: 1
+Row count is : 51
+Today's date : 9
+Old Static Value in Excel: 794.0
+New Static Value in Excel: 794.0
+New EIN in Excel: 444444889
+Loaded suite Razoo_Test_Suite_GoogleChrome
+Started
+************** START : Invoke Razoo Application ****************
+Passed. Razoo Site gets invoked successfully!
+************** END : Invoke Razoo Application ****************
+.---------------------- START OF SCENARIO 24 ----------------------
+************** START: Causes and Person i like ****************
+*************** User 1 creation *******************
+************** START : Create a Razoo Account ****************
+Sign in link Top position : 46
+UI Check : Pass. Signup link is present at the correct position in Home screen.
+Passed. User has reached the Account creation page successfully.
+Step 1 : Entering  Account creation details
+Pass. 'Send me the monthly Razoo newsletter' checkbox is present in the Razoo Signup screen.
+Create Account button Top position : 566
+UI Check : Fail. CreateAccount button is not present at the correct position in Signup screen.
+Step 2 : Passed. Account has been created successfully!
+Pass. Hitler image is present in Profile page.
+Step 3 : Passed. User1 Last Name gets displayed in Account screen.
+************** END : Create a Razoo Account ****************
+************** START : Make a donation using New Card ****************
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $10
+User reached Donation Form page successfully!!
+Failed. Incorrect donation amount gets displayed.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - User1 Last Name, Name on Card - User1 Last Name, 4111111111111111, person@razooGC794.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 1076
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+*************** User 2 creation *******************
+************** START : Create a Razoo Account ****************
+Sign in link Top position : 46
+UI Check : Pass. Signup link is present at the correct position in Home screen.
+Passed. User has reached the Account creation page successfully.
+Step 1 : Entering  Account creation details
+Pass. 'Send me the monthly Razoo newsletter' checkbox is present in the Razoo Signup screen.
+Create Account button Top position : 566
+UI Check : Fail. CreateAccount button is not present at the correct position in Signup screen.
+Step 2 : Passed. Account has been created successfully!
+Pass. Hitler image is present in Profile page.
+Step 3 : Passed. User2 Last Name gets displayed in Account screen.
+************** END : Create a Razoo Account ****************
+************** START : Make a donation using New Card ****************
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $10
+User reached Donation Form page successfully!!
+Failed. Incorrect donation amount gets displayed.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - User2 Last Name, Name on Card - User2 Last Name, 4111111111111111, causes@razooGC794.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 1076
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+*************** User 2 makes a donation for ORG2 *******************
+************** START : Make a donation using New Card ****************
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $10
+User reached Donation Form page successfully!!
+Failed. Incorrect donation amount gets displayed.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - User2 Last Name, Name on Card - User2 Last Name, 4111111111111111, causes@razooGC794.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 725
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+*************** Verify User1 details in User2 Profile screen *******************
+********** Verifying data under 'Person I May Know' section *********
+Pass. User1 image is displayed under User2 Profile screen.
+Pass. User1 is displayed under User2 Profile screen.
+Pass. Person I May Know image is displayed under User1 Profile screen.
+*************** Verify User2 details in User1 Profile screen *******************
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as person@razooGC794.com and Password as 123456
+Login button Top position : 285
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+********** Verifying data under 'Cause I May Know' section ************
+Pass. User2 image is displayed under User1 Profile screen.
+Pass. User2 is displayed under User1 Profile screen.
+Pass. Person I May Know image is displayed under User1 Profile screen.
+Pass. Cause I May Like image is displayed under User1 Profile screen.
+Fail. New Razoo3 GC Org794 for Release 2.2 ORG is not displayed under User1 Cause I May Know section.
+************** END: Causes and Person i like ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 24 ----------------------
+Duration: 202.765625 seconds
+---------------------- START OF SCENARIO 25 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooGC794.com and Password as 1234567
+Login button Top position : 285
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Wish List Entry ****************
+Pass. Project of New Razoo GC Org794 for Release 2.2 story link is present in the Profile screen.
+Passed. Add to Wish List gets displayed in the Story page.
+************** Clisks on 'Add To Wish List Entry'  ****************
+Adding...text is displayed Success!!
+Wish List is displayed in user profile screen Success!!
+Passed. 'Drop from Wish List' gets displayed in the Story page.
+************** Clisks on 'Drop from Wish List Entry'  ****************
+Dropping ...text is displayed Success!!
+Wish List removed from user profile screen Success!!
+************** END: Wish List Entry ****************
+************** START: Delete My Story page ****************
+Pass. Project of New Razoo GC Org794 for Release 2.2 story link is present in the Profile screen.
+Pass. 'Delete this project' link is not present in the Edit page.
+Fail. User has failed to reach delete confirmation screen.
+Fail. Project of New Razoo GC Org794 for Release 2.2 story page has not deleted sucessfully from the application.
+************** END: Delete My Story page ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Failed. Logout is Failed.
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 25 ----------------------
+Duration: 270.234375 seconds
+---------------------- START OF SCENARIO 26 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 285
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Impersonate Permission ****************
+Permissions link Top position : 95
+UI Check : Pass. Permissions link is present at the correct position in Account screen.
+Activated the Impersonate checkbox.
+Step 1 : Failed. Impersonate Permissions not updated successfully!
+Step 2 : Passed. Impersonate option gets displayed in the Admin screen.
+Impersonate button Top position : 322
+UI Check : Fail. Impersonate button is not present at the correct position in Impersonate screen.
+Step 3 : Passed. Razoo Admin successfully impersonated as Normal2 User794.
+************** END: Impersonate Permission ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 26 ----------------------
+Duration: 301.75 seconds
+---------------------- START OF SCENARIO 27 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 46
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 285
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Adding URN to Causes By Amount field ****************
+Success! user reached Causes by Amount (from Browse Page) screen.
+Passed. 'Causes by Amount (from Browse Page)' text gets displayed in the admin page.
+Passed. 'Edit the list of the suggested causes (list one URN per line)' text gets displayed in the admin page.
+User Entering Harvard-College URN in the 'Causes by Amount' field
+Passed. All urns had been parsed and successfully added text displayed.
+************** END: Adding URN to Causes By Amount field ****************
+************** START: Verify suggested amount story page in the search screen ****************
+Passed. How Can I Help? for text displayed in the search screen.
+Harvard College Story page gets displayed with suggessted donation amount.Perfect.
+************** END: Verify suggested amount story page in the search screen ****************
+************** START: Removing URN from Causes By Amount field ****************
+Success! user reached Causes by Amount (from Browse Page) screen.
+Passed. 'Causes by Amount (from Browse Page)' text gets displayed in the admin page.
+Removing Harvard-College URN in the 'Causes by Amount' field
+************** START: Verify suggested amount story page in the search screen ****************
+Failed. How Can I Help? for text displayed in the search screen.
+Passed: Harvard College Story page not displayed with suggessted donation amount
+************** END: Verify suggested amount story page in the search screen ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 11
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- START OF SCENARIO 27 ----------------------
+Duration: 347.0625 seconds
+---------------------- START OF SCENARIO 28 ----------------------
+************** START: Login Via Gmail ****************
+SigninGoogle button Top position : 5
+UI Check : Pass. SigninGoogle button is present at the correct position in Home screen.
+@@@@@@@@@ FAILED @@@@@@@@@. Step 1 : User failed to log in successfully into Razoo via Gmail.
+Fri Mar 09 11:40:54 +0530 2012 selenium-client received failure from selenium server:
+requested:
+	cmd=click
+	1=//img[@alt='Your profile picture']
+	sessionId=d06b20db83b14556bcf9505b7c589cfe
+received:
+	"ERROR: Element //img[@alt='Your profile picture'] not found"
+	called from C:/Ruby187/lib/ruby/1.8/timeout.rb:67:in `timeout'
+E
+Finished in 349.984375 seconds.

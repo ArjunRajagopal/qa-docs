@@ -1,0 +1,284 @@
+--------------------- START OF SCENARIO 22 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 50
+UI Check : Fail. Login link is not present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE547.com and Password as 1234567
+Login button Top position : 288
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search ORG ****************
+Donate button Top position : 11
+UI Check : Fail. Donate button is not present at the correct position in Home screen.
+Project checkbox Top position : 142
+UI Check : Fail. Project checkbox is not present at the correct position in Search screen.
+FR checkbox Top position : 142
+UI Check : Fail. FR checkbox is not present at the correct position in Search screen.
+Step 1 : Type Harvard College in the Search Field
+Search button Top position : 100
+UI Check : Fail. Search button is not present at the correct position in Search screen.
+Step 2 : Click on Harvard College link
+Step 3 : Passed. User reached Harvard College Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Create Themed Fundraiser ****************
+@@@@@@@@@ FAILED @@@@@@@@@. Make a Wish section is not present in the Story page.
+************** END : Create Themed Fundraiser ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 15
+UI Check : Fail. Logout link is not present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 22 ----------------------
+Duration: 913.15625 seconds
+---------------------- START OF SCENARIO 23 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 50
+UI Check : Fail. Login link is not present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 288
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search ORG ****************
+Donate button Top position : 11
+UI Check : Fail. Donate button is not present at the correct position in Home screen.
+Project checkbox Top position : 142
+UI Check : Fail. Project checkbox is not present at the correct position in Search screen.
+FR checkbox Top position : 142
+UI Check : Fail. FR checkbox is not present at the correct position in Search screen.
+Step 1 : Type New Razoo IE Org547 for Release 2.2 in the Search Field
+Search button Top position : 100
+UI Check : Fail. Search button is not present at the correct position in Search screen.
+Step 2 : Click on New Razoo IE Org547 for Release 2.2 link
+Step 3 : Passed. User reached New Razoo IE Org547 for Release 2.2 Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Remove ORG Admin rights ****************
+CreateAdmin button Top position : 426
+UI Check : Fail. CreateAdmin button is not present at the correct position in Story screen.
+Passed. Org Admin successfully created for normaluser2@razooIE547.com user
+DeleteAdmin link Top position : 644
+UI Check : Fail. DeleteAdmin link is not present at the correct position in Story screen.
+Step 1 : Passed. Successful error text is displayed.
+Step 2 : Passed. normaluser2@razooIE547.com user is not displayed under Org Admins section.
+************** END : Remove ORG Admin rights ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 15
+UI Check : Fail. Logout link is not present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 23 ----------------------
+Duration: 1050.890625 seconds
+---------------------- START OF SCENARIO 24 ----------------------
+************** START: Causes and Person i like ****************
+*************** User 1 creation *******************
+************** START : Create a Razoo Account ****************
+Sign in link Top position : 50
+UI Check : Fail. Signup link is not present at the correct position in Home screen.
+Passed. User has reached the Account creation page successfully.
+Step 1 : Entering  Account creation details
+Pass. 'Send me the monthly Razoo newsletter' checkbox is present in the Razoo Signup screen.
+Create Account button Top position : 584
+UI Check : Fail. CreateAccount button is not present at the correct position in Signup screen.
+Step 2 : Passed. Account has been created successfully!
+Pass. Hitler image is present in Profile page.
+Step 3 : Passed. User1 Last Name gets displayed in Account screen.
+************** END : Create a Razoo Account ****************
+************** START : Make a donation using New Card ****************
+Failed. Story Header is not displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $10
+User reached Donation Form page successfully!!
+Failed. Incorrect donation amount gets displayed.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - User1 Last Name, Name on Card - User1 Last Name, 4111111111111111, person@razooIE547.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 1154
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+*************** User 2 creation *******************
+************** START : Create a Razoo Account ****************
+Sign in link Top position : 50
+UI Check : Fail. Signup link is not present at the correct position in Home screen.
+Passed. User has reached the Account creation page successfully.
+Step 1 : Entering  Account creation details
+Pass. 'Send me the monthly Razoo newsletter' checkbox is present in the Razoo Signup screen.
+Create Account button Top position : 584
+UI Check : Fail. CreateAccount button is not present at the correct position in Signup screen.
+Step 2 : Passed. Account has been created successfully!
+Pass. Hitler image is present in Profile page.
+Step 3 : Passed. User2 Last Name gets displayed in Account screen.
+************** END : Create a Razoo Account ****************
+************** START : Make a donation using New Card ****************
+Failed. Story Header is not displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $10
+User reached Donation Form page successfully!!
+Failed. Incorrect donation amount gets displayed.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - User2 Last Name, Name on Card - User2 Last Name, 4111111111111111, causes@razooIE547.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 1154
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+*************** User 2 makes a donation for ORG2 *******************
+************** START : Make a donation using New Card ****************
+Failed. Story Header is not displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $10
+User reached Donation Form page successfully!!
+Failed. Incorrect donation amount gets displayed.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - User2 Last Name, Name on Card - User2 Last Name, 4111111111111111, causes@razooIE547.com
+Pass. I'm Logged in user! 'Store my card and create account for future use' checkbox is not present.
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 741
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+*************** Verify User1 details in User2 Profile screen *******************
+********** Verifying data under 'Person I May Know' section *********
+Pass. User1 image is displayed under User2 Profile screen.
+Pass. User1 is displayed under User2 Profile screen.
+Pass. Person I May Know image is displayed under User1 Profile screen.
+*************** Verify User2 details in User1 Profile screen *******************
+************** START : Login to Razoo ****************
+Login link Top position : 50
+UI Check : Fail. Login link is not present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as person@razooIE547.com and Password as 123456
+Login button Top position : 288
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+********** Verifying data under 'Cause I May Know' section ************
+Pass. User2 image is displayed under User1 Profile screen.
+Pass. User2 is displayed under User1 Profile screen.
+Pass. Person I May Know image is displayed under User1 Profile screen.
+Pass. Cause I May Like image is displayed under User1 Profile screen.
+Fail. New Razoo3 IE Org547 for Release 2.2 ORG is not displayed under User1 Cause I May Know section.
+************** END: Causes and Person i like ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 15
+UI Check : Fail. Logout link is not present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 24 ----------------------
+Duration: 1493.9375 seconds
+---------------------- START OF SCENARIO 25 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 50
+UI Check : Fail. Login link is not present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as normaluser1@razooIE547.com and Password as 1234567
+Login button Top position : 288
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Wish List Entry ****************
+Pass. Project of New Razoo IE Org547 for Release 2.2 story link is present in the Profile screen.
+Passed. Add to Wish List gets displayed in the Story page.
+************** Clisks on 'Add To Wish List Entry'  ****************
+Failed. Adding...text is not displayed.
+Wish List is displayed in user profile screen Success!!
+Passed. 'Drop from Wish List' gets displayed in the Story page.
+************** Clisks on 'Drop from Wish List Entry'  ****************
+Dropping ...text is displayed Success!!
+Wish List removed from user profile screen Success!!
+************** END: Wish List Entry ****************
+************** START: Delete My Story page ****************
+Pass. Project of New Razoo IE Org547 for Release 2.2 story link is present in the Profile screen.
+Pass. 'Delete this project' link is present in the Edit page.
+Pass. User has reached delete confirmation screen.
+Pass. Project of New Razoo IE Org547 for Release 2.2 story page has been deleted sucessfully from the application.
+************** END: Delete My Story page ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 15
+UI Check : Fail. Logout link is not present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 25 ----------------------
+Duration: 1735.234375 seconds
+---------------------- START OF SCENARIO 26 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 50
+UI Check : Fail. Login link is not present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 288
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Impersonate Permission ****************
+Permissions link Top position : 99
+UI Check : Fail. Permissions link is not present at the correct position in Account screen.
+Activated the Impersonate checkbox.
+Step 1 : Failed. Impersonate Permissions not updated successfully!
+Step 2 : Passed. Impersonate option gets displayed in the Admin screen.
+Impersonate button Top position : 339
+UI Check : Fail. Impersonate button is not present at the correct position in Impersonate screen.
+Step 3 : Passed. Razoo Admin successfully impersonated as Normal2 User547.
+************** END: Impersonate Permission ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 15
+UI Check : Fail. Logout link is not present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 26 ----------------------
+Duration: 1839.265625 seconds
+************** START : Login to Razoo ****************
+Login link Top position : 50
+UI Check : Fail. Login link is not present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 288
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+Success! user reached Causes by Amount (from Browse Page) screen.
+Passed. 'Causes by Amount (from Browse Page)' text gets displayed in the admin page.
+Passed. 'Edit the list of the suggested causes (list one URN per line)' text gets displayed in the admin page.
+User Entering Harvard-College URN in the 'Causes by Amount' field
+Passed. All urns had been parsed and successfully added text displayed.
+User Started to search Harvard College story in the search page
+Failed. How Can I Help? for text not displayed in the search screen.
+Failed. Harvard College Story page not displayed
+************** START : Log out from Razoo ****************
+Logout link Top position : 15
+UI Check : Fail. Logout link is not present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- START OF SCENARIO 27 ----------------------
+************** START: Login Via Gmail ****************
+SigninGoogle button Top position : 8
+UI Check : Fail. SigninGoogle button is not present at the correct position in Home screen.
+Step 1 : Passed. User gets logged in successfully into Razoo via Gmail.
+Step 2 : Passed. Gmail emailId gets successfully displayed in the Account Settings screen.
+Step 3 : Passed. Google image gets displayed under connection section.
+Step 4 : Passed. Successfully disconnected Google from Razoo account.
+************** End: Login Via Gmail ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 15
+UI Check : Fail. Logout link is not present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+************** START: Login Via FB ****************
+SigninFB button Top position : 8
+UI Check : Fail. SigninFB button is not present at the correct position in Home screen.
+Step 1 : Passed. User gets logged in successfully into Razoo via Gmail.
+E
+Finished in 2314.4375 seconds.
+
+ 

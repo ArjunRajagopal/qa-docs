@@ -1,0 +1,224 @@
+>ruby Razoo_Test_Suite_FireFox.rb
+Started at: Wed Mar 21 10:49:55 +0530 2012 seconds
+Total WorkSheet count in Excel: 1
+Row count is : 51
+Today's date : 21
+Old Static Value in Excel: 239.0
+New Static Value in Excel: 240
+New EIN in Excel: 666667299
+Loaded suite Razoo_Test_Suite_FireFox
+Started
+************** START : Invoke Razoo Application ****************
+Passed. Razoo Site gets invoked successfully!
+************** END : Invoke Razoo Application ****************
+.---------------------- START OF SCENARIO 1 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 47
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 277
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create a New ORG ****************
+CreateORG button Top position : 603
+UI Check : Fail. CreateORG button is not present at the correct position in CreateNPO screen.
+Passed. New ORG : New Razoo1 FF Org240 for Release 2.5 successfully created.
+************** END : Create a New ORG ****************
+************** START: Edit NPO Details ****************
+Step 1 : Modify the NPO details
+Save button Top position : 3096
+UI Check : Fail. Save button is not present at the correct position in EditORG screen.
+Step 2 : Passed. NPO Details was successfully changed and saved.
+************** END: Edit NPO Details ****************
+************** START: Verify the Audit ****************
+VerifyAudit link Top position : 256
+UI Check : Fail. VerifyAudit link is not present at the correct position in Audits screen.
+CreateAudit button Top position : 593
+UI Check : Fail. CreateAudit button is not present at the correct position in VerifyAudit screen.
+Audit created successfully
+Passed. Now, ORG is Verified.
+************** END: Verify the Audit ****************
+************** START: Verify NPO Details ****************
+Updated Phone Number gets diplayed in the Story page.
+Updated EIN Number gets diplayed in the Story page.
+Updated Address 1 gets diplayed in the Story page.
+Updated Address 2 gets diplayed in the Story page.
+Passed. Tell Your Story link is displayed under NPO Completion Steps section.
+Passed. Illustrate Your Story link is displayed under NPO Completion Steps section.
+Passed. Share It With Others link is displayed under NPO Completion Steps section.
+************** END: Verify NPO Details ****************
+************** START: Become a Fan - Explicit ****************
+BecomeFan link Top position : 996
+UI Check : Fail. BecomeFan link is not present at the correct position in ORGStory screen.
+Passed. I'm a Fan of New Razoo1 FF Org240 for Release 2.5 story :)
+************** END: Become a Fan - Explicit ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 12
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 1 --------------------------
+Duration: 135.181365 seconds
+---------------------- START OF SCENARIO 2 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 47
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 277
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create a New ORG with No EIN ****************
+Passed. New ORG successfully created.
+************** END : Create a New ORG with No EIN ****************
+************** START: Edit NPO Details ****************
+Step 1 : Modify the NPO details
+Save button Top position : 3096
+UI Check : Fail. Save button is not present at the correct position in EditORG screen.
+Step 2 : Passed. NPO Details was successfully changed and saved.
+************** END: Edit NPO Details ****************
+************** START: Verify the Audit ****************
+VerifyAudit link Top position : 256
+UI Check : Fail. VerifyAudit link is not present at the correct position in Audits screen.
+CreateAudit button Top position : 593
+UI Check : Fail. CreateAudit button is not present at the correct position in VerifyAudit screen.
+Audit created successfully
+Passed. Now, ORG is Verified.
+************** END: Verify the Audit ****************
+************** START: Verify NPO Details ****************
+Updated Phone Number gets diplayed in the Story page.
+EIN number is not updated.
+Updated Address 1 gets diplayed in the Story page.
+Updated Address 2 gets diplayed in the Story page.
+Passed. Tell Your Story link is displayed under NPO Completion Steps section.
+Passed. Illustrate Your Story link is displayed under NPO Completion Steps section.
+Passed. Share It With Others link is displayed under NPO Completion Steps section.
+************** END: Verify NPO Details ****************
+************** START: Become a Fan - Explicit ****************
+BecomeFan link Top position : 996
+UI Check : Fail. BecomeFan link is not present at the correct position in ORGStory screen.
+Passed. I'm a Fan of New Razoo1 FF Org240 for Release 2.5 story :)
+************** END: Become a Fan - Explicit ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 12
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 2 --------------------------
+Duration: 246.950151 seconds
+---------------------- START OF SCENARIO 3 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 47
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 277
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create a New ORG ****************
+CreateORG button Top position : 603
+UI Check : Fail. CreateORG button is not present at the correct position in CreateNPO screen.
+Passed. New ORG : New Razoo2 FF Org240 for Release 2.5 successfully created.
+************** END : Create a New ORG ****************
+************** START: Edit NPO Details ****************
+Step 1 : Modify the NPO details
+Save button Top position : 3096
+UI Check : Fail. Save button is not present at the correct position in EditORG screen.
+Step 2 : Passed. NPO Details was successfully changed and saved.
+************** END: Edit NPO Details ****************
+************** START: Verify the Audit ****************
+VerifyAudit link Top position : 256
+UI Check : Fail. VerifyAudit link is not present at the correct position in Audits screen.
+CreateAudit button Top position : 593
+UI Check : Fail. CreateAudit button is not present at the correct position in VerifyAudit screen.
+Audit created successfully
+Passed. Now, ORG is Verified.
+************** END: Verify the Audit ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 12
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 3 --------------------------
+Duration: 313.38262 seconds
+---------------------- START OF SCENARIO 4 ----------------------
+************** START : Login to Razoo ****************
+Login link Top position : 47
+UI Check : Pass. Login link is present at the correct position in Home screen.
+Step 1 : Entering valid User credintials - User Name as brian@razoo.com and Password as razoo1
+Login button Top position : 277
+UI Check : Fail. Login button is not present at the correct position in Login screen.
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create a New ORG ****************
+CreateORG button Top position : 603
+UI Check : Fail. CreateORG button is not present at the correct position in CreateNPO screen.
+Passed. New ORG : New Razoo3 FF Org240 for Release 2.5 successfully created.
+************** END : Create a New ORG ****************
+************** START: Edit NPO Details ****************
+Step 1 : Modify the NPO details
+Save button Top position : 3096
+UI Check : Fail. Save button is not present at the correct position in EditORG screen.
+Step 2 : Passed. NPO Details was successfully changed and saved.
+************** END: Edit NPO Details ****************
+************** START: Verify the Audit ****************
+VerifyAudit link Top position : 256
+UI Check : Fail. VerifyAudit link is not present at the correct position in Audits screen.
+CreateAudit button Top position : 593
+UI Check : Fail. CreateAudit button is not present at the correct position in VerifyAudit screen.
+Audit created successfully
+Passed. Now, ORG is Verified.
+************** END: Verify the Audit ****************
+************** START : Log out from Razoo ****************
+Logout link Top position : 12
+UI Check : Pass. Logout link is present at the correct position in Team screen.
+Passed. Contact Razoo label gets displayed at the footer.
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 4 --------------------------
+Duration: 379.661929 seconds
+------------------------ START OF SCENARIO 5 --------------------
+************** START: Search ORG ****************
+Donate button Top position : 91
+UI Check : Fail. Donate button is not present at the correct position in Home screen.
+Project checkbox Top position : 177
+UI Check : Fail. Project checkbox is not present at the correct position in Search screen.
+FR checkbox Top position : 177
+UI Check : Fail. FR checkbox is not present at the correct position in Search screen.
+Step 1 : Type Harvard College in the Search Field
+Search button Top position : 130
+UI Check : Fail. Search button is not present at the correct position in Search screen.
+Step 2 : Click on Harvard College link
+Step 3 : Passed. User reached Harvard College Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Make a donation using New Card ****************
+Passed. Story Header gets displayed in the Donation Form screen.
+Step 1 : Enter donation amount - $10.00
+User reached Donation Form page successfully!!
+Entered amount $10.00 gets displayed in the DF screen.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Passed. Tip section is not displayed in the Donation Form screen.
+Step 2 : Entering Card Details : User Name - , Name on Card - Normal1 User240, 4111111111111111
+, normaluser1@razooFF240.com
+Step 3 : Passed. Correct Total amount gets displayed under 'Your card will be charged' section
+DonateNow button Top position : 1192
+UI Check : Fail. DonateNow button is not present at the correct position in DF screen.
+Pass. 'Terms of use' checkbox is present in the Donation Form screen.
+Processing donation... processing icon Success!!
+Step 4 : Passed. Donation was Successful! and Guest User Account created and landed in Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Post Comment ****************
+Post button Top position : 271
+UI Check : Fail. Post button is not present at the correct position in ThankYou screen.
+Step 1 : Passed. Donor's comment posted Successfully.
+************** START : Share page - Normal User ****************
+Passed. User has successfully reached the Share page.
+Mydonations link Top position : 501
+UI Check : Fail. Imdone link is not present at the correct position in Share screen.
+************** END : Share page - Normal User ****************
+Step 2 : Passed. Posted comment is displayed successfully in My Profile screen.
+************** END : Post Comment **

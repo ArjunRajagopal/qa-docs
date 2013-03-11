@@ -1,0 +1,375 @@
+>ruby Razoo_Test_Suite_FireFox.rb
+Total WorkSheet count in  Excel: 1
+Row count is : 37
+Loaded suite Razoo_Test_Suite_FireFox
+Started
+************** START : Invoke Razoo Application ****************
+Passed. Razoo Site gets invoked successfully!
+************** END : Invoke Razoo Application ****************
+.---------------------- START OF SCENARIO 1 ----------------------
+************** START : Login to Razoo ****************
+Step 1 : Entering valid User credintials - User Name as srajkumar.here@gmail.com and Password as razoo1
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create a New ORG ****************
+Passed. New ORG successfully created.
+************** END : Create a New ORG ****************
+************** START: Edit NPO Details ****************
+Step 1 : Modify the NPO details
+Step 2 : Passed. NPO Details was successfully changed and saved.
+************** END: Edit NPO Details ****************
+************** START: Verify the Audit ****************
+Audit created successfully
+Passed. Now, ORG is Verified.
+************** END: Verify the Audit ****************
+************** START: Verify NPO Details ****************
+Step 1 : Passed. User has reached RazooTrunkIE ORG04 story page successfully.
+Updated Phone Number gets diplayed in the Story page.
+Updated EIN Number gets diplayed in the Story page.
+Updated Address 1 gets diplayed in the Story page.
+Updated Address 2 gets diplayed in the Story page.
+************** END: Verify NPO Details ****************
+************** START: Become a Fan - Explicit ****************
+Passed. I'm a Fan of RazooTrunkIE ORG04 story :)
+************** END: Become a Fan - Explicit ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 1 --------------------------
+.------------------------ START OF SCENARIO 2 --------------------
+************** START: Search ORG ****************
+Step 1 : Type Harvard College in the Search Field
+Step 2 : Click on Harvard College link
+Step 3 : Passed. User reached Harvard College Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Make a donation using New Card ****************
+Step 1 : Enter donation amount - $10.00
+Failed. Problem in reaching the Donation Form page.
+Entered amount $10.00 gets displayed in the DF screen.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Step 2 : Entering Card Details : , Normal1 User, 4111111111111111
+, normaltrunk1@razooIE04.com
+Processing Donation... Success!!
+Step 3 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Create a Razoo Account ****************
+Failed. User didn't reach the Account creation page.
+Step 1 : Entering  Account creation details
+Step 2 : Passed. Account has been created successfully!
+No header links displayed in the Thank you screen.
+************** END : Create a Razoo Account ****************
+************** START : Check My Donation ****************
+Success!. My donation gets displayed under 'My Donation' screen.
+************** END : Check My Donation ****************
+------------------------ END OF SCENARIO 2 --------------------
+.------------------------  START OF SCENARIO 3 ----------------------- 
+************** START: Search ORG ****************
+Step 1 : Type Harvard College in the Search Field
+Step 2 : Click on Harvard College link
+Step 3 : Passed. User reached Harvard College Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Create Story Page ****************
+Step 1 : Entering valid details for creating Story page
+Step 2 : Passed. RazooTrunkIEFR05 for Harvard College created successfully!
+Step 3 : Passed. Admin links are available in the Created RazooTrunkIEFR05 for Harvard College page
+************** END : Create Story Page ****************
+************** START : Make a donation using New Card ****************
+Step 1 : Enter donation amount - $11.50
+Failed. Problem in reaching the Donation Form page.
+Entered amount $11.50 gets displayed in the DF screen.
+Failed. User First name & Last name doesn't get displayed in Name on Card field.
+Step 2 : Entering Card Details : , Normal1 User, 4111111111111111
+, normaltrunk1@razooIE04.com
+Processing Donation... Success!!
+Step 3 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Post Comment ****************
+Step 1 : Passed. Donor's comment posted Successfully in Donor's Wall!!
+************** START : Share page - Normal User ****************
+Passed. User has successfully reached the Share page.
+************** END : Share page - Normal User ****************
+Step 2 : Passed. Posted comment is displayed successfully in My Account screen. 
+************** END : Post Comment ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+------------------------  END OF SCENARIO 3 ----------------------- 
+.---------------------- START OF SCENARIO 4 ----------------------
+************** START : Login to Razoo ****************
+Step 1 : Entering valid User credintials - User Name as srajkumar.here@gmail.com and Password as razoo1
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Grant ORG Admin rights ****************
+Passed. Org Admin successfully created for normaltrunk1@razooIE04.com user
+************** END : Grant ORG Admin rights ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+************** START : Login to Razoo ****************
+Step 1 : Entering valid User credintials - User Name as normaltrunk1@razooIE04.com and Password as 123456
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create Story Page ****************
+Step 1 : Entering valid details for creating Story page
+Step 2 : Passed. RazooTrunkIEPRO05 of Harvard College created successfully!
+Step 3 : Passed. Admin links are available in the Created RazooTrunkIEPRO05 of Harvard College page
+************** END : Create Story Page ****************
+************** START : Make a donation using saved Card ****************
+Step 1 : Select donation amount
+Failed. Problem in reaching the Donation Form page.
+Selected suggested amount $10.00 gets displayed in the DF screen.
+Step 2 : Provide tip amount of $9
+Processing Donation... Success!!
+Step 3 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using Saved Card ****************
+---------------------- END OF SCENARIO 4 --------------------------
+.---------------------- START OF SCENARIO 5 ----------------------
+************** START: Search ORG ****************
+Step 1 : Type Harvard College in the Search Field
+Step 2 : Click on Harvard College link
+Step 3 : Passed. User reached Harvard College Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Make a donation using Add Credit Card ****************
+Step 1 : Enter donation amount - $10.00
+Failed. Problem in reaching the Donation Form page.
+Step 2 : Selected suggested amount $10.00 gets displayed in the DF screen.
+Step 3 : Selected a recurring donation
+Failed. User First name & Last name doesn't get displayed in Name on Card field.
+Step 4 : Entering New Card Details : , 378282246310005
+Processing Donation... Success!!
+Step 5 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using Saved Card ****************
+************** START : Delete Comment ****************
+Step 1 : Failed in posting the comment.
+Step 2: Passed. Successfully deleted the posted comment.
+Step 3 : Passed. Deleted comment doesn't gets displayed in My Account screen.
+************** END : Delete Comment ****************
+************** START : Remove fan ****************
+Step 1 : Slide the mouse on story page and click on 'X' mark
+Step 2 : Passed. Successfully removed the story from Fan's list in Account screen.
+Step 3 : Passed. Verified the fan status in the RazooTrunkIEFR05 for Harvard College page.
+************** END : Remove fan ****************
+---------------------- END OF SCENARIO 5 --------------------------
+.------- START OF SCENARIO 6 ----------
+************** START : Cancel the Recurring Donation ****************
+************** END : Cancel the Recurring Donation ****************
+************** START : Delete my Stored Card ****************
+Passed. The My stored card was successfully deleted.
+************** END : Delete my Stored Card ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+------- END OF SCENARIO 6 ------------
+.---------------------- START OF SCENARIO 7 ----------------------
+************** START : Login to Razoo ****************
+Step 1 : Entering valid User credintials - User Name as normaltrunk1@razooIE04.com and Password as 123456
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Reset my password ****************
+Step 1: Enter password and password confirmation
+Step 2: Passed. Account updated successfully
+************** END : Reset my password ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+************** START : Login to Razoo ****************
+Step 1 : Entering valid User credintials - User Name as normaltrunk1@razooIE04.com and Password as 1234567
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 7 --------------------------
+.---------------------- START OF SCENARIO 8 ----------------------
+************** START: Search ORG ****************
+Step 1 : Type RazooTrunkIE ORG04 in the Search Field
+Step 2 : Click on RazooTrunkIE ORG04 link
+Step 3 : Passed. User reached RazooTrunkIE ORG04 Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Goto Donation Form Screen & Click Signup link ****************
+Enter donation amount - $10.00
+Step 1 : Failed. Problem in reaching the Donation Form page.
+Step 2 : Click on 'Sign Up' link in the donation form screen.
+************** END : Goto Donation Form Screen & Click Signup link ****************
+************** START : Create a Razoo Account ****************
+Passed. User has reached the Account creation page successfully.
+Step 1 : Entering  Account creation details
+Step 2 : Passed. Account has been created successfully! and retained in the Donation Form screen.
+************** END : Create a Razoo Account ****************
+************** START : Make a donation using New Card ****************
+Step 1 : Entered amount $10.00 gets displayed in the DF screen.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Step 2 : Entering Card Details : Normal2 User, Normal2 User, 5555555555554444
+, normaltrunk2@razooIE02.com
+Processing Donation... Success!!
+Step 3 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Post Comment ****************
+Step 1 : Passed. Donor's comment posted Successfully in Donor's Wall!!
+************** START : Share page - Normal User ****************
+Passed. User has successfully reached the Share page.
+************** END : Share page - Normal User ****************
+Step 2 : Passed. Posted comment is displayed successfully in My Account screen. 
+************** END : Post Comment ****************
+************** START : Check My Donation ****************
+Success!. My donation gets displayed under 'My Donation' screen.
+************** END : Check My Donation ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 8 --------------------------
+.---------------------- START OF SCENARIO 9 ----------------------
+************** START: Search ORG ****************
+Step 1 : Type RazooTrunkIE ORG04 in the Search Field
+Step 2 : Click on RazooTrunkIE ORG04 link
+Step 3 : Passed. User reached RazooTrunkIE ORG04 Story Page successfully!!
+************** END : Search ORG ****************
+************** START : Goto Donation Form Screen & Click Login link ****************
+Enter donation amount - $10.00
+Step 1 : Failed. Problem in reaching the Donation Form page.
+Step 2 : Enter valid user credentials - normaltrunk2@razooIE02.com and 1234567 
+Step 2 : Passed. Login was Successful!!!
+************** END : Goto Donation Form Screen & Click Login link ****************
+************** START : Make a donation using New Card ****************
+Step 1 : Entered amount $10.00 gets displayed in the DF screen.
+Passed. User First name & Last name gets displayed in Name on Card field.
+Step 2 : Entering Card Details : Normal2 User, Normal2 User, 5555555555554444
+, normaltrunk2@razooIE02.com
+Processing Donation... Success!!
+Step 3 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START : Post Comment ****************
+Step 1 : Passed. Donor's comment posted Successfully in Donor's Wall!!
+************** START : Share page - Normal User ****************
+Passed. User has successfully reached the Share page.
+************** END : Share page - Normal User ****************
+Step 2 : Passed. Posted comment is displayed successfully in My Account screen. 
+************** END : Post Comment ****************
+************** START : Check My Donation ****************
+Success!. My donation gets displayed under 'My Donation' screen.
+************** END : Check My Donation ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 9 --------------------------
+.---------------------- START OF SCENARIO 10 ----------------------
+************** START : Login to Razoo ****************
+Step 1 : Entering valid User credintials - User Name as normaltrunk2@razooIE02.com and Password as 1234567
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START : Create Team Campaign Page ****************
+Step 1 : Entering valid details for creating Team Campaign page
+Step 2 : Passed. Team Campaign was created successfully.
+Step 3 : Passed. Entered Campaign goal amount gets displayed in Story page.
+Step 4 : Passed. Entered Campaign title gets displayed in Story page.
+Step 5 : Passed. Count says 'left' label.
+************** END : Create Team Campaign Page ****************
+************** START : Edit Team Campaign Page ****************
+Step 1 : Start updating the Team Campaign page.
+Step 2 : Team Campaign page gets updated successfully.
+************** END : Edit Team Campaign Page ****************
+************** START : Create FR for Team Camp ****************
+Step 1 : Entering valid details for creating FR page for Team Campaign.
+Step 2 : Passed. FR gets created successfully!
+Step 3 : Passed. Team Campaign link present in the FR story page.
+Step 4 : Passed. Team Campaign icon present in the FR story page.
+Step 5 : Passed. 1st Rank gets displayed in the Story page.
+************** END : Create Team Campaign Page ****************
+************** START : Make a donation using saved Card ****************
+Step 1 : Select donation amount
+Failed. Problem in reaching the Donation Form page.
+Selected suggested amount $10.00 gets displayed in the DF screen.
+Step 2 : Provide tip amount of $9
+Processing Donation... Success!!
+Step 3 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using Saved Card ****************
+************** START : View Campaign Leaderboard ****************
+Step 1 : Verify amount raised in the Thermometer.
+Step 1 is passed.
+Step 2 : Verify amount raised at the title header.
+Step 2 is passed.
+Step 3 : Verify donor's count at the title header.
+Step 3 is passed.
+Step 4 : Verify fundraiser's count at the title header.
+Step 4 is passed.
+Step 5 : Verify dollars in the Leaderboard.
+Step 5 is passed.
+Step 6 : Verify donors in the Leaderboard.
+Step 6 is passed.
+Step 7 : Verify FR link in the Leaderboard.
+Step 7 is passed.
+Step 8 : Verify FR link under 'Most Recent Donations' frame.
+Step 8 is passed.
+************** END : View Campaign Leaderboard ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 10 ----------------------
+.---------------------- START OF SCENARIO 11 ----------------------
+************** START : Login to Razoo ****************
+Step 1 : Entering valid User credintials - User Name as normaltrunk1@razooIE04.com and Password as 1234567
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search PROJECT ****************
+Step 1 : Type RazooTrunkIEPRO05 of Harvard College in the Search Field
+Step 2 : Click on RazooTrunkIEPRO05 of Harvard College link
+Step 3 : Passed. User reached RazooTrunkIEPRO05 of Harvard College Story Page successfully!!
+************** END : Search PROJECT ****************
+************** START : DonateAnywere ****************
+Step 1 : Enter donation amount in the First screen.
+Step 2 : Enter Billing details in the Second screen.
+Step 3 : Enter Card details in the Third screen.
+Correct total amount(including Tip) - $19 gets displayed.
+Donation was processing!!!
+Step 4 : Donation was successful. Thank you screen gets displayed.
+Passed. Facebook link is present in the Thank You screen.
+Passed. Twitter link is present in the Thank You screen.
+************** END : DonateAnywere ****************
+************** START : Log out from Razoo ****************
+Passed. Logged out Successfully from the Application!
+************** END : Log out from Razoo ****************
+---------------------- END OF SCENARIO 11 ----------------------
+.---------------------- START OF SCENARIO 12 ----------------------
+************** START : Login to Razoo ****************
+Step 1 : Entering valid User credintials - User Name as normaltrunk1@razooIE04.com and Password as 1234567
+Step 2 : Passed. Login was Successful!!!
+************** END : Login to Razoo ****************
+************** START: Search PROJECT ****************
+Step 1 : Type RazooTrunkIEPRO05 of Harvard College in the Search Field
+Step 2 : Click on RazooTrunkIEPRO05 of Harvard College link
+Step 3 : Passed. User reached RazooTrunkIEPRO05 of Harvard College Story Page successfully!!
+************** END : Search PROJECT ****************
+************** START : Create Matching Grant ****************
+Step 1 : MG creation failed.
+Step 2 : MG icon displayed in the story page.
+Step 3 : Correct MG amount - $100 displayed in the story page.
+Step 4 : Correct MG creator name displayed in the story page.
+************** END : Create Matching Grant ****************
+************** START : Make a donation using New Card ****************
+Step 1 : Enter donation amount - $101.00
+Failed. Problem in reaching the Donation Form page.
+Entered amount $101.00 gets displayed in the DF screen.
+Failed. User First name & Last name doesn't get displayed in Name on Card field.
+Step 2 : Entering Card Details : Normal2 User, Normal1 User, 4111111111111111
+, normaltrunk1@razooIE04.com
+Processing Donation... Success!!
+Step 3 : Passed. Donation was Successful! and User reached the Thank You screen.
+************** END : Make a donation using New Card ****************
+************** START: Search PROJECT ****************
+Step 1 : Type RazooTrunkIEPRO05 of Harvard College in the Search Field
+Step 2 : Click on RazooTrunkIEPRO05 of Harvard College link
+Step 3 : Passed. User reached RazooTrunkIEPRO05 of Harvard College Story Page successfully!!
+************** END : Search PROJECT ****************
+************** START : Close Matching Grant ****************
+MG amount is achieved; Thus, MG amount is not displayed in the Story page.
+MG amount is achieved; Thus, MG Creator Name is not displayed in the Story page.
+Donated Amount gets displayed in the MG screen.
+Click on 'Close' button in the MG screen.
+MG was successfully closed.
+************** END : Close Matching Grant ****************
+---------------------- END OF SCENARIO 12 ----------------------
+..
+Finished in 1754.783368 seconds.
+
+14 tests, 168 assertions, 0 failures, 0 errors
+>Exit code: 0
